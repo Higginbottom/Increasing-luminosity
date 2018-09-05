@@ -47,7 +47,7 @@
 \usepackage{gensymb}
 \usepackage{subfig}
 
-
+\usepackage{todonotes}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -98,14 +98,15 @@ BT7 1NN, UK\\
 
 % Abstract of the paper
 \begin{abstract}
-The unmistakeable signatures of outflowing gas have been observed in several low-mass X-ray binaries, and 
-evidence from dipping behaviour in a majority of these sources suggests that the outflowing gas is in the form 
-of equatorial disk winds. Whilst the mechanism for the launch and acceleration of these winds is a topic of debate, it is very likely
-that thermal driving at least contributes to the overall picture. 
-It has been previously demonstrated that thermal winds are able to drive significant outflows (with outflow mass
-from outer parts of the disk exceeding the accretion rate in the inner disk required to explain the observed source
-luminosities. 
-Here we use an operator splitting method to carry out radiation-hydrodynamic simulations of a thermally driven 
+
+Signatures of outflowing gas have been observed in a number of low-mass X-ray binaries. The fact that a majority of these systems exhibit dipping behavior suggests that 
+that the outflowing gas is in the form 
+of equatorial disk winds. Although the mechanism for the launch and acceleration of these winds is debated, it is very likely
+that thermal driving at least contributes to the overall picture. Our previous radiation-hydrodynamic simulations of a fiducial X-ray binary indicate that thermal heating can drive significant outflows (with outflow mass from the outer parts of the disk exceeding the accretion rate onto the cenral black hole).
+% It has been previously demonstrated that thermal winds are able to drive significant outflows (with outflow mass
+%from outer parts of the disk exceeding the accretion rate in the inner disk required to explain the observed source
+%luminosities. 
+Here we use the same operator splitting method to carry out radiation-hydrodynamic simulations of a thermally driven 
 disk wind for a range of source luminosities. We find that as the luminosity increases, the wind efficiency (the mass outflow
 rate scaled to the assumed mass accretion rate) remains constant as a factor of about two. This is in agreement
 with both observations and previous theoretical work. We also find that the maximum velocity seen in a simulated 
@@ -132,7 +133,9 @@ radio loud jets are the most spectacular form of outflow, it is possible that th
 winds may have more impact on the surroundings of the objects and have the ability to change the nature
 of the accretion flow more substantially.
 The driving mechanism for these disk winds is a topic of much debate and active research, however there are broadly
-three contenders. 
+three contenders -- line driving, thermal driving, and magneto-centric driving.  Our interest here is in understanding the winds that appear as blue shifted X-ray absorption lines in X-ray binaries.
+
+\todo[inline]{The above paragraph seems to refer to accretion disk systems in general, but what follows quickkly devolves to discussion of X-ray binaries.  Probably need either to indicate somehow that our specific interest is X-ray binaries. I've added something but it is not great. ksl}
 
 Firstly, line driving is the process of scattering (mainly UV) radiation
 from bound-bound lines in ionised material. If the ionisation state of the gas is 
@@ -163,6 +166,8 @@ where $M_{BH}$ is the mass of the central object, $\mu$ is the
 mean molecular mass which we set to 0.6 and the other symbols have the usual meaning. 
 For our SED, $T_C=1.4\times10^7$~K.
 
+\todo[inline]{Given that the formula above is for $R_{IC}$, I would have expected you to give me this, and to tell me where it is in units of the BH radius or something so I could put it in context.  ksl}
+
  The third proposed mechanism is that of magneto-centrifugal driving. 
 Observations of the disk-wind in GRO J1655-40 in a peculiar `hypersoft' state suggested that the wind in that
 case arose well inside $\rm{R_{IC}}$. In such a case the existence of a thermal wind is harder to justify 
@@ -180,6 +185,7 @@ particularly interesting because it is almost certain to
 operate on some level wherever there is strongly heated gas and a disk of sufficient radial extent that hot gas 
 can escape. 
 
+\todo[inline]{The next paragrah is very Higginbottom/Proga centric.  There are other people who have worked on this problem, and so some general references are needed.  This is important since one of these folks will likely be the referee.  It would be useful to identify who were the first few to suggest thermal driving, separate from any work we have done.}
 Previous studies have shown that very large mass-loss rates
 are possible through thermal winds  \citep{2015ApJ...807..107H} although this is very dependant on the details
  of the heating/cooling rates  \citep{2017ApJ...836...42H}. These 
@@ -201,13 +207,14 @@ suggests that the wind efficiency tends to a constant value \citep[][hereafter D
 
 Here, we extend the radiation hydrodynamic simulations to higher 
 luminosities in order to investigate the effect on mass loss rate and velocity in the resulting outflows. 
-We use the same technique as H18, and describe the details of the simulations in the next section. 
+As discussed in Section \ref{section:method}, we  use the same technique as H18 with slight modifications for varying the luminosity.
 We then present our results in Section \ref{section:results} before making comparisons to observations in Section \ref{section:discussion}.
 
 
  
 
-\section{Method}
+\section{Method }
+\label{section:method}
 
 As in H18, we use an operator splitting radiation-hydrodynamic method to treat the propagation of radiation
 from a central source through the wind. We use the hydrodynamic code {\sc zeus} 
@@ -311,6 +318,8 @@ simulation, the angle at which the interface occurs decreases to about 88\degree
 extent of the disk, whereas for the $\rm{L_{Edd}}$ simulation, the interface is about a degree further from the
 midplane at 87\degree.
 
+\todo[inline]{In the next paragraph you use the words "continuum driving" to describe radiation pressure due to electrons scattering.  You did not use this term earlier in the introduction anywhere that I could find.  My preference would be to refer to this as radiative driving ... but whatever you do it should be consistent with the introduction. ksl}
+
 Density contour plots for some of the resulting outflows are shown in Figure \ref{figure:wind_small_image}.
 We concentrate here, and in the rest of the results/discussion sections, on the calculations using luminosities
 up to 60 per cent of $L_{Edd}$. This is because we do not treat continuum driving, a process
@@ -382,12 +391,12 @@ accelerating more quickly.
 Another line commonly seen in XRB winds is the Lyman $\alpha$ resonance 
 line of Fe~\textsc{xxvi} which is actually a doublet with components at
 1.778~{\AA} and 1.783~{\AA}. The ray traced absorption profile for this 
-feature is given as the fine lines in Figure \ref{figure:line26_smooth}. The details of the absorption
+feature is given as the fine lines in Figure \ref{figure:line26_smooth}. The absorption profile
 as a function of velocity in each of the two lines is almost identical to that seen in the 
 Fe \textsc{xxv} feature shown in Figure \ref{figure:line25} but these features
 are slightly less
-saturated and hence there is a range of EWs for the doublet, ranging from -8~eV for the 4 percent $\rm{L_{Edd}}$
-run to -16~eV for the 60 per cent luminosity. The run at the Eddington luminosity 
+saturated and hence there is a range of EWs for the doublet, ranging from -8~eV for the 4\% $\rm{L_{Edd}}$
+run to -16~eV for the 60\% luminosity. The run at the Eddington luminosity 
 has an EW of almost 20eV, but this should be treated with caution because of the lack
 of continuum driving in our simulation.
 
@@ -410,6 +419,8 @@ observed with the \emph{Chandra} HETG with a resolution of 0.012\AA~(thick lines
 \label{figure:line26_smooth}
 \end{figure}
 
+\todo[inline]{Regarding the figures, in the text you use L$_{Edd}$.  In the figures, you use L$_{edd}$.  Ideally these would be the same, though I guess you could argue that your are consistent in the two places.  I favor L$_{Edd}$  More important, the labels in the figures are very small.  My rule of thumb is that you should be able to take the figure and display it in a presentation.  None of your figures pass my test.  I think the paper would be much easier to read if you would make an attempt to increase the label sizes.  The worst figure in this regard is Fig. 6 which has microscopic labels. }
+
 \textcolor{red}{I'm unsure about what can we really say
 here regarding the smoothed line profile. Clearly the line width is huge - I started out thinking I'd 
 write here about how the 
@@ -419,7 +430,7 @@ observer would fit a Gaussian to this and get a blue shift of a hundred km/s ish
 wavelength they normally quote of 1.78\AA. Not sure that the evidence is here to ruffle feathers}
 
 
-
+\todo[inline]{Poasible add some sentences regarding the observed EW and how they compare. ksl}
 
 
 
@@ -473,6 +484,8 @@ range of luminosities, as seen in the simulations.
 about the comaprison to the regions - seems more discussions than results. But should I leave
 any of the line results in results??}
 
+\todo[inline]{I tend to agree this discussion looks better here than in the results section}
+
 \subsection{Effect of continuum driving}
 
 As the luminosity increases, one should include the effects
@@ -498,12 +511,16 @@ which give numbers for radiation force- I think it is logged and it would be an
 interesting first look at what we might expect in the future. Only if its easy though.
 If not, I think this whole subsection can go}
 
+\todo[inline]{Unless the effects of continuum driving are included in the Kinetic Luminosity discussion below, I think this should go after 4.4.  You can conclude here that one of our future goals is to do this properly with continuum driving included. ksl}
+
 \subsection{Kinetic Luminosity}
 Whilst the mass loss is of interest when considering how the wind could affect the 
 accretion flow through the disk, it is also interesting to consider what (if any) effect the
 wind could have on the surroundings. The kinetic energy carried by the wind is a
 good measure of this, and so we calculate this via a simple summation around the outer
-edge of the domain of massloss rate x radial velocity. 
+edge of the domain of mass loss rate x radial velocity. 
+
+
 
 
 \begin{figure}
