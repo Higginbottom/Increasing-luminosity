@@ -133,20 +133,22 @@ radio loud jets are the most spectacular form of outflow, it is possible that th
 winds may have more impact on the surroundings of the objects and have the ability to change the nature
 of the accretion flow more substantially.
 The driving mechanism for these disk winds is a topic of much debate and active research, however there are broadly
-three contenders -- line driving, thermal driving, and magneto-centric driving.  Our interest here is in understanding the winds that appear as blue shifted X-ray absorption lines in X-ray binaries.
+three contenders -- radiation driving, thermal driving, and magneto-centric driving.  Our interest here is in understanding the winds that appear as blue shifted X-ray absorption lines in X-ray binaries.
 
 \todo[inline]{The above paragraph seems to refer to accretion disk systems in general, but what follows quickkly devolves to discussion of X-ray binaries.  Probably need either to indicate somehow that our specific interest is X-ray binaries. I've added something but it is not great. ksl}
 
-Firstly, line driving is the process of scattering (mainly UV) radiation
+Firstly, radiation driving of winds is simply caused by a transfer of momentum from radiation to matter via Compton
+scattering or of scattering (mainly UV) radiation
 from bound-bound lines in ionised material. If the ionisation state of the gas is 
-favourable, then this mechanism can
-result in a driving force more than  1000 times that expected from Thompson scattering alone \citep{1975ApJ...195..157C}.
+favourable, then this latter line driving mechanism can
+result in a driving force more than  1000 times that expected from Compton scattering alone \citep{1975ApJ...195..157C}.
  In X-ray binaries
 the observed absorption lines suggest that the material tends to be highly ionised \citep[e.g.][]{2009ApJ...701..865K,
 2018ApJ...861...26A}, with ionization parameter $\xi \geq 3$
 \citep{2016AN....337..368D} and hence this mechanism is unlikely to be important. That said, the luminosity of 
 some XRBs is 
-approaching or even exceeding the Eddington limit, and so Thompson scattering alone may be sufficient to affect the
+approaching or even exceeding the Eddington limit, and so radiation driving via Compton scattering alone 
+may be sufficient to affect the
 flow.
 
 Secondly, thermal driving is the case where gas is heated to a temperature at which the thermal velocity of the 
@@ -164,9 +166,9 @@ R_{IC}=\frac{GM_{BH}\mu m_H}{k_BT_C}
 \end{equation}
 where $M_{BH}$ is the mass of the central object, $\mu$ is the 
 mean molecular mass which we set to 0.6 and the other symbols have the usual meaning. 
-For our SED, $T_C=1.4\times10^7$~K.
+For our SED, $T_C=1.4\times10^7$~K, so $R_{IC}=4.82\times10^{11}$ - about $4.6\times10^5$ gravitational
+radii.
 
-\todo[inline]{Given that the formula above is for $R_{IC}$, I would have expected you to give me this, and to tell me where it is in units of the BH radius or something so I could put it in context.  ksl}
 
  The third proposed mechanism is that of magneto-centrifugal driving. 
 Observations of the disk-wind in GRO J1655-40 in a peculiar `hypersoft' state suggested that the wind in that
@@ -318,11 +320,9 @@ simulation, the angle at which the interface occurs decreases to about 88\degree
 extent of the disk, whereas for the $\rm{L_{Edd}}$ simulation, the interface is about a degree further from the
 midplane at 87\degree.
 
-\todo[inline]{In the next paragraph you use the words "continuum driving" to describe radiation pressure due to electrons scattering.  You did not use this term earlier in the introduction anywhere that I could find.  My preference would be to refer to this as radiative driving ... but whatever you do it should be consistent with the introduction. ksl}
-
 Density contour plots for some of the resulting outflows are shown in Figure \ref{figure:wind_small_image}.
 We concentrate here, and in the rest of the results/discussion sections, on the calculations using luminosities
-up to 60 per cent of $L_{Edd}$. This is because we do not treat continuum driving, a process
+up to 60 per cent of $L_{Edd}$. This is because we do not treat radiation driving, a process
 that would become increasingly important as the luminosity approaches $L_{Edd}$.
 It is clear from these images that the velocity of the outflows increases with luminosity, as does the 
 density in the wind. Some useful parameters showing this are given in the lower part of Table \ref{table:wind_param}.
@@ -398,7 +398,7 @@ are slightly less
 saturated and hence there is a range of EWs for the doublet, ranging from -8~eV for the 4\% $\rm{L_{Edd}}$
 run to -16~eV for the 60\% luminosity. The run at the Eddington luminosity 
 has an EW of almost 20eV, but this should be treated with caution because of the lack
-of continuum driving in our simulation.
+of radiation driving in our simulation.
 
 The current generation of X-ray spectrometers are unable to split this feature
 into its components; for example the wavelength resolution of the \emph{Chandra}
@@ -418,8 +418,6 @@ of luminosities (thin lines) and also smoothed with a Gaussian to represent the 
 observed with the \emph{Chandra} HETG with a resolution of 0.012\AA~(thick lines)}
 \label{figure:line26_smooth}
 \end{figure}
-
-\todo[inline]{Regarding the figures, in the text you use L$_{Edd}$.  In the figures, you use L$_{edd}$.  Ideally these would be the same, though I guess you could argue that your are consistent in the two places.  I favor L$_{Edd}$  More important, the labels in the figures are very small.  My rule of thumb is that you should be able to take the figure and display it in a presentation.  None of your figures pass my test.  I think the paper would be much easier to read if you would make an attempt to increase the label sizes.  The worst figure in this regard is Fig. 6 which has microscopic labels. }
 
 \textcolor{red}{I'm unsure about what can we really say
 here regarding the smoothed line profile. Clearly the line width is huge - I started out thinking I'd 
@@ -449,7 +447,7 @@ who found that for a disk of our size ($R_{out}=2R_{IC}$) and a Compton temperat
 very close to ours the wind efficiency peaked at just over two for a luminosity close to our lowest luminosity.
 They then see the efficiency decrease slowly with increasing luminosity, 
 always remaining above one. Our wind efficiencies are slightly larger than theirs, which is interesting since
-we neglect any continuum driving effects, which they include via an approximate correction. 
+we neglect any radiation driving effects, which they include via an approximate correction. 
 
 The wind efficiency for a range of observed XRB winds is given by \cite{2012MNRAS.422L..11P} and
 it is instructive to compare our results with these observations. Figure \ref{figure:mdot_vs_lum} shows 
@@ -486,7 +484,7 @@ any of the line results in results??}
 
 \todo[inline]{I tend to agree this discussion looks better here than in the results section}
 
-\subsection{Effect of continuum driving}
+\subsection{Effect of radiation driving}
 
 As the luminosity increases, one should include the effects
 of radiation pressure on the simulation. For such a relatively hard SED, 
@@ -562,7 +560,7 @@ is more impulsively heated.}
 as with the mass loss rate, the ratio of kinetic energy to luminosity tends to a fixed value
 of $6\times10^{-5}$.}
 
-These simulations do not include the effects of continuum driving, which may become
+These simulations do not include the effects of radiation driving, which may become
 important at higher luminosities. 
 
 
