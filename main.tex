@@ -330,6 +330,54 @@ As one would expect, the mass-loss rate through the outer boundary, which is ess
 two parameters also increases with luminosity. We will discuss this further in Section \ref{section:discussion}
 
 
+
+
+\section{Discussion}
+\label{section:discussion}
+
+
+\subsection{Mass-loss rates}
+
+The mass-loss rates listed in Table \ref{table:wind_param} 
+increases as the luminosity of the central source increases however it is interesting to compare
+these rates with the assumed accretion rate required to generate the luminosity. When we do 
+this we find that the mass-loss through the wind is always roughly double the accretion rate.
+This `wind efficiency' relationship is similar to that found in the analysis carried out by \cite{2018MNRAS.473..838D}
+who found that for a disk of our size ($R_{out}=2R_{IC}$) and a Compton temperature
+very close to ours the wind efficiency peaked at just over two for a luminosity close to our lowest luminosity.
+They then see the efficiency decrease slowly with increasing luminosity, 
+always remaining above one. Our wind efficiencies are slightly larger than theirs, which is interesting since
+we neglect any radiation driving effects, which they include via an approximate correction. 
+
+The wind efficiency for a range of observed XRB winds is given by \cite{2012MNRAS.422L..11P} and
+it is instructive to compare our results with these observations. Figure \ref{figure:mdot_vs_lum} shows 
+this comparison, with the black symbols referring to the observations and the red stars showing the
+results of these simulations. 
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/ponti.eps}
+\caption{$\rm{\dot{M}_{wind}/\dot{M}_{acc}}$ vs. luminosity based upon figure 5 in \citet{2012MNRAS.422L..11P}. 
+Black symbols are empirical values obtained from {\em Chandra} HETG data for several LMXBs. 
+The symbols refer to the specific object each measurement refers to 
+(triangles = H1743-322; circles = 4U~1640-47; squares = GRS~1915+105; diamonds = GRO~J1655-40). 
+The red stars represent the results of the simulations presented here, and the dotted line
+is at $\rm{\dot{M}_{wind}/\dot{M}_{acc}}$=2.0.}
+\label{figure:mdot_vs_lum}
+\end{figure}
+
+At first sight, our prediction of a constant wind efficiency does not
+agree well with the observations, which appear to suggest an increase of wind efficiency with
+luminosity. However, the trend suggesting an increase in wind efficiency with luminosity is largely driven 
+by observations of just one source - GRS 1915 +105.  This is an exceptional source, which has been 
+accreting close to the Eddington limit since its discovery in 1992 \citep{1994ApJS...92..469C,
+2017MNRAS.468.4748C} never
+entering quiescence. It also exhibits unusual SEDs, not corresponding exactly to the normal high/soft,
+low/hard spectral states \cite{2016ApJ...833..165Z}. This complex source requires more detailed
+analysis and modelling which is beyond the scope of this study. Setting aside the observations of this
+source, thew rest show reasonable consistency with wind efficiency around two over a significant 
+range of luminosities, as seen in the simulations.
+
+\subsection{Line Shape}
 We have also computed some simulated absorption line profiles, which give more insight into the velocities 
 in the wind.
 Firstly, we show the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$ transition at 1.85~{\AA} for a sightline 
@@ -432,84 +480,7 @@ wavelength they normally quote of 1.78\AA. Not sure that the evidence is here to
 
 
 
-\section{Discussion}
-\label{section:discussion}
 
-
-\subsection{Mass-loss rates}
-
-The mass-loss rates listed in Table \ref{table:wind_param} 
-increases as the luminosity of the central source increases however it is interesting to compare
-these rates with the assumed accretion rate required to generate the luminosity. When we do 
-this we find that the mass-loss through the wind is always roughly double the accretion rate.
-This `wind efficiency' relationship is similar to that found in the analysis carried out by \cite{2018MNRAS.473..838D}
-who found that for a disk of our size ($R_{out}=2R_{IC}$) and a Compton temperature
-very close to ours the wind efficiency peaked at just over two for a luminosity close to our lowest luminosity.
-They then see the efficiency decrease slowly with increasing luminosity, 
-always remaining above one. Our wind efficiencies are slightly larger than theirs, which is interesting since
-we neglect any radiation driving effects, which they include via an approximate correction. 
-
-The wind efficiency for a range of observed XRB winds is given by \cite{2012MNRAS.422L..11P} and
-it is instructive to compare our results with these observations. Figure \ref{figure:mdot_vs_lum} shows 
-this comparison, with the black symbols referring to the observations and the red stars showing the
-results of these simulations. 
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/ponti.eps}
-\caption{$\rm{\dot{M}_{wind}/\dot{M}_{acc}}$ vs. luminosity based upon figure 5 in \citet{2012MNRAS.422L..11P}. 
-Black symbols are empirical values obtained from {\em Chandra} HETG data for several LMXBs. 
-The symbols refer to the specific object each measurement refers to 
-(triangles = H1743-322; circles = 4U~1640-47; squares = GRS~1915+105; diamonds = GRO~J1655-40). 
-The red stars represent the results of the simulations presented here, and the dotted line
-is at $\rm{\dot{M}_{wind}/\dot{M}_{acc}}$=2.0.}
-\label{figure:mdot_vs_lum}
-\end{figure}
-
-At first sight, our prediction of a constant wind efficiency does not
-agree well with the observations, which appear to suggest an increase of wind efficiency with
-luminosity. However, the trend suggesting an increase in wind efficiency with luminosity is largely driven 
-by observations of just one source - GRS 1915 +105.  This is an exceptional source, which has been 
-accreting close to the Eddington limit since its discovery in 1992 \citep{1994ApJS...92..469C,
-2017MNRAS.468.4748C} never
-entering quiescence. It also exhibits unusual SEDs, not corresponding exactly to the normal high/soft,
-low/hard spectral states \cite{2016ApJ...833..165Z}. This complex source requires more detailed
-analysis and modelling which is beyond the scope of this study. Setting aside the observations of this
-source, thew rest show reasonable consistency with wind efficiency around two over a significant 
-range of luminosities, as seen in the simulations.
-
-\subsection{Line Shape}
-\textcolor{red}{Thinking of moving a chunk of stuff from the results here - in particular the blurb 
-about the comaprison to the regions - seems more discussions than results. But should I leave
-any of the line results in results??}
-
-\todo[inline]{I tend to agree this discussion looks better here than in the results section}
-
-\subsection{Effect of radiation driving}
-
-As the luminosity increases, one should include the effects
-of radiation pressure on the simulation. For such a relatively hard SED, 
-the plasma above the disk will by largely ionized, and so electron
-pressure would be the only radiation pressure one would expect. The 
-effect can be though of as effectively a reduction in the inner radius
-at which a wind is launched. \cite{2018MNRAS.473..838D} give this 
-correction as
-\begin{equation}
-\overline{R}_{IC}\approx R_{IC}\left(1-\frac{L}{0.71L_{Edd}}\right)
-\end{equation}
-which means that the wind can be launched from all radii at a luminosity
-of $0.71 L_{Edd}$. This in turn means that our mass loss rates will be a lower 
-bound for luminosities approaching or exceeding this value. \textcolor{red}{I should 
-quickly try and work out the mass loss per unit disk area - check this is more or less
-constant over all radii - this would allow me to quantify the approximate extra mass loss
-rate that I might see} We might also 
-expect somewhat higher velocities in the outflow, due to the additional force.
-
-\textcolor{red}{I'm thinking that I could include here some numbers extracted from python 
-which give numbers for radiation force- I think it is logged and it would be an 
-interesting first look at what we might expect in the future. Only if its easy though.
-If not, I think this whole subsection can go}
-
-\todo[inline]{Unless the effects of continuum driving are included in the Kinetic Luminosity discussion below, I think this should go after 4.4.  You can conclude here that one of our future goals is to do this properly with continuum driving included. ksl}
 
 \subsection{Kinetic Luminosity}
 Whilst the mass loss is of interest when considering how the wind could affect the 
@@ -540,6 +511,32 @@ is more to it. In some ways it is more fundamental than the mass loss rate, alth
 probably less important because clearly such small K.Es wont really do much damage
 outside the system.}
 
+\subsection{Effect of radiation driving}
+
+As the luminosity increases, one should include the effects
+of radiation pressure on the simulation. For such a relatively hard SED, 
+the plasma above the disk will by largely ionized, and so electron
+pressure would be the only radiation pressure one would expect. The 
+effect can be though of as effectively a reduction in the inner radius
+at which a wind is launched. \cite{2018MNRAS.473..838D} give this 
+correction as
+\begin{equation}
+\overline{R}_{IC}\approx R_{IC}\left(1-\frac{L}{0.71L_{Edd}}\right)
+\end{equation}
+which means that the wind can be launched from all radii at a luminosity
+of $0.71 L_{Edd}$. This in turn means that our mass loss rates will be a lower 
+bound for luminosities approaching or exceeding this value. \textcolor{red}{I should 
+quickly try and work out the mass loss per unit disk area - check this is more or less
+constant over all radii - this would allow me to quantify the approximate extra mass loss
+rate that I might see} We might also 
+expect somewhat higher velocities in the outflow, due to the additional force.
+
+\textcolor{red}{I'm thinking that I could include here some numbers extracted from python 
+which give numbers for radiation force- I think it is logged and it would be an 
+interesting first look at what we might expect in the future. Only if its easy though.
+If not, I think this whole subsection can go}
+
+\todo[inline]{Unless the effects of continuum driving are included in the Kinetic Luminosity discussion, I think this should go after 4.4.  You can conclude here that one of our future goals is to do this properly with continuum driving included. ksl}
 
 \section{Summary }
 
