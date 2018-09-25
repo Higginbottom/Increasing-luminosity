@@ -127,15 +127,28 @@ Accretion discs -- hydrodynamics -- methods:numerical -- stars:winds -- X-rays:b
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-The signature of outflowing gas has been observed in a vast range of astrophysics objects, from protostellar
-nebulae through cataclysmic variables and X-ray binaries up to Seyferts and Quasars. Whilst the 
-radio loud jets are the most spectacular form of outflow, but the slower, yet more massive disk
+The signature of outflowing gas has been observed in a large range of astrophysical objects, from protostellar
+nebulae through cataclysmic variables and X-ray binaries to Seyferts and Quasars. Whilst the 
+radio loud jets are the most spectacular form of outflow, the slower, yet more massive disk
 winds may have more impact on the surroundings of the objects and change the nature
 of the accretion flow more substantially.
-The driving mechanism for these disk winds is a topic of much debate and active research, however there are broadly
-three contenders -- radiation driving, thermal driving, and magneto-centric driving.  Our interest here is in understanding the winds that appear as blue shifted X-ray absorption lines in X-ray binaries.
+ 
 
-\todo[inline]{The above paragraph seems to refer to accretion disk systems in general, but what follows quickkly devolves to discussion of X-ray binaries.  Probably need either to indicate somehow that our specific interest is X-ray binaries. I've added something but it is not great. ksl}
+X-ray binaries are systems in 
+which an evolved secondary star transfers mass to a compact primary (either a black hole or a neutron star)
+via an accretion disk. They are excellent laboratories in which to study accretion physics that likely also applies to AGN
+\citep{2003MNRAS.345L..19M,2004A&A...414..895F,2006MNRAS.372.1366K}.
+In particular they exhibit dramatic changes in their spectra and luminosity over timescales on the order of days
+\cite[e.g.][]{1999ApJ...520..776S,2004ApJ...610..378P} which can be linked to changes in the nature of the accretion flow \cite[e.g.][]{1995PASP..107.1207N,2012Sci...337..540F}. Disk winds are seen when 
+systems are in the ``High-soft'' state, where the accretion disk is thought to extend to radii close to the 
+central compact object \cite[][although also see \citealt{2016ApJ...830L...5H}]{2012MNRAS.422L..11P}. This high luminosity state is in contrast to the ``low-hard'' state
+where the inner edge of the accretion disk appears to be truncated and emission is primarily arising from a Comptonised
+corona. If the disk-wind carries away enough material from the accretion disk then this provides a mechanism for
+destabilising the disk and so providing a mechanism for a state change \cite{1986ApJ...306...90S}. We are
+interested in developing a theoretical model for these disk winds with an eye to predicting the mass-loss rate
+and hence testing the possibility that such winds are indeed responsible for state change. 
+The driving mechanism for these disk winds is a topic of much debate and active research, however there are broadly
+three contenders -- radiation driving, thermal driving, and magneto-centric driving. 
 
 Firstly, radiation driving of winds is simply caused by a transfer of momentum from radiation to matter via Compton
 scattering or of scattering (mainly UV) radiation
@@ -181,17 +194,20 @@ exist. In such a wind, ionized material is loaded onto magnetic field lines leav
 of angular momentum conservation, the material is accelerated as it moves out along the field lines, like beads
 on a wire.
 
-Most likely, all three mechanisms are at play perhaps changing their importance depending on the
+Most likely, all three mechanisms are at play, perhaps changing their importance depending on the
 geometry and accretion state of the source in question. Of the three mechanisms, thermal driving is 
 particularly interesting because it is almost certain to 
 operate on some level wherever there is strongly heated gas and a disk of sufficient radial extent that hot gas 
-can escape. 
+can escape. Indeed, this mechanism might not only be important in X-ray binaries but also in protoplanetary systems \cite[e.g.][]{2012MNRAS.422.1880O} and AGN \cite[e.g.][]{2018MNRAS.476.4395B}.
 
-\todo[inline]{The next paragrah is very Higginbottom/Proga centric.  There are other people who have worked on this problem, and so some general references are needed.  This is important since one of these folks will likely be the referee.  It would be useful to identify who were the first few to suggest thermal driving, separate from any work we have done.}
-Previous studies have shown that very large mass-loss rates
-are possible through thermal winds  \citep{2015ApJ...807..107H} although this is very dependant on the details
+The existence of thermally driven outflows from accretion disks has been postulated since such disks were themselves
+first considered \citep{1973A&A....24..337S}. More detailed theoretical treatment of thermal winds \citep{1983ApJ...271...70B} suggested that the mass-loss could be sufficient to destabilise the disk \citep{1986ApJ...306...90S}.
+As computer power improved, more detailed hydrodynamic simulations  \citep{1996ApJ...461..767W,2006ApJ...652L.117N,2010ApJ...719..515L,2015ApJ...807..107H} underlined the earlier predications of large mass-loss rates and also showed that thermal winds could provide a source of observed blue shifted absorption lines.
+
+Although very large mass-loss rates are possible through thermal winds, the actual rate is very 
+dependant on the details
  of the heating/cooling rates  \citep{2017ApJ...836...42H}. These 
-in turn depend critically on the source SED and any attenuation effect between the source and the wind
+in turn depend critically on the source SED \citep{2017MNRAS.467.4161D} and any attenuation effect between the source and the wind
 launching region. \citet[hereafter H18]{2018MNRAS.479.3651H} presented a radiation-hydrodynamic simulation which 
 took account
 of this attenuation by coupling the radiative transfer code  \textsc{python} to the hydrodynamics code \textsc{zeus} and 
@@ -200,7 +216,7 @@ to produced the observed luminosity through accretion. In addition, reasonable a
 Lyman $\alpha$ lines of helium and hydrogen like iron generated from the simulation and those seen in \emph{Chandra} 
 observations of the LMXB GRO J1655-40 in the soft-intermediate state. 
 
-That simulation was for a luminosity of 4 percent of the Eddington luminosity  ($\rm{L_{Edd}}$) for a 7 solar mass 
+That simulation was for a luminosity of 4 per cent of the Eddington luminosity  ($\rm{L_{Edd}}$) for a 7 solar mass 
 central black hole but disk winds have been observed in systems with luminosities up to or even slightly exceeding 
 $\rm{L_{Edd}}$ \citep[][herafter P12]{2012MNRAS.422L..11P}.  Observations
 suggest that the wind efficiency (mass loss rate divided by mass accretion rate) may increase with luminosity, 
@@ -372,35 +388,15 @@ by observations of just one source - GRS 1915 +105.  This is an exceptional sour
 accreting close to the Eddington limit since its discovery in 1992 \citep{1994ApJS...92..469C,
 2017MNRAS.468.4748C} never
 entering quiescence. It also exhibits unusual SEDs, not corresponding exactly to the normal high/soft,
-low/hard spectral states \cite{2016ApJ...833..165Z}. This complex source requires more detailed
+low/hard spectral states \citep{2016ApJ...833..165Z}. Finally, with an orbital period of 34 days 
+\citep{2014SSRv..183..223C} this is by far the largest system - and could perhaps host a signficantly
+larger accretion disk than we include in our model. This complex source requires more detailed
 analysis and modelling which is beyond the scope of this study. Setting aside the observations of this
-source, thew rest show reasonable consistency with wind efficiency around two over a significant 
+source, the rest show reasonable consistency with wind efficiency around two over a significant 
 range of luminosities, as seen in the simulations.
 
-\subsection{Line Shape}
-We have also computed some simulated absorption line profiles, which give more insight into the velocities 
-in the wind.
-Firstly, we show the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$ transition at 1.85~{\AA} for a sightline 
-of 80\degree in Figure \ref{figure:line25}. This is calculated using the same ray tracing technique as discussed 
-by \cite{2015ApJ...807..107H}. The equivalent width (EW) is very similar for all the lines (because they are all 
-saturated) at about 5-6~eV. 
-
-\begin{figure}
-\includegraphics[width=\columnwidth]{figures/80_degrees_fe25.eps}
-\caption{Simulated line profile for the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$
-transition at 1.85~{\AA}, as viewed from $i = 80\degree$ for a range
-of luminosities.}
-\label{figure:line25}
-\end{figure}
-
-There are two interesting observations to be made from this plot. Firstly, the maximum velocity seen in 
-the line increases with luminosity. Secondly, there is a notable difference between the line two lower luminosity 
-profiles and the higher pair. All lines exhibit some absorption at about $+100kms^{-1}$, due to thermal 
-broadening of absorption from stationary or slow moving material. However for the 4 per cent and 10 percent 
-cases the feature is almost black at $0kms^{-1}$ indicating the presence of far more slow moving material than 
-in the 30 and 60 per cent cases. An explanation for this can be seen in the expected nature of outflows as one 
-increases luminosity. 
-
+\subsection{Comparison to B83 calculations}
+\label{Section:B83}
 A useful way of categorising different classes of thermally driven winds was introduced 
 by \cite[hereafter B83]{1983ApJ...271...70B}, and further developed by \cite[hereafter W96]{1996ApJ...461..767W}. The
 diagram from B83 is reproduced in Figure  \ref{figure:regions}. The vertical axis is the luminosity of the central
@@ -425,16 +421,49 @@ how quickly the plasma is heated. The regions in the lower half of the model exh
 whilst regions in the upper half show rapid heating to the Compton temperature. The regions on the
 right hand side are where gas at the Compton temperature would be expected to escape, whilst on the 
 left hand side the gas is gravitationally bound and so forms an atmosphere rather than a wind. 
-In region C, the gas is not heated quickly enough to get to the Compton temperature and so the 
-wind is expected to be slow.
+In regions B and C, the gas flows outwards too quickly to be heated to the Compton temperature. In region
+B the gas temperature still exceeds the temperature needed to escape at the radius at which it is launched, 
+whereas in region C it does not even reach that temperature and so the gas remains gravitationally
+bound.
 
 B83 found that their model did not yield a clear dividing line between bound and unbound solutions 
 at $\omega=R_{IC}$ and W96 found that a more reasonable location for this cutoff was $\omega=0.1 R_{IC}$.
 Our 4 per cent simulation represents about $0.5 L_{crit}$ and is shown on Figure \ref{figure:regions} as the lowest 
 horizontal dashed line. The 10 per cent simulation (next horizontal line up) has a luminosity just below $L_{crit}$ 
-and one can therefore tentatively ascribe the difference in the line profile around 0 $kms^{-1}$ to the change from 
+and it is therefore tempting ascribe the difference in the line profile around 0 $kms^{-1}$ to the change from 
 region D/C to region E/B with the gas being more impulsively heated at the higher luminosities and hence 
-accelerating more quickly.
+accelerating more quickly. 
+
+
+
+
+
+\subsection{Line Shape}
+We have also computed some simulated absorption line profiles, which give more insight into the velocities 
+in the wind.
+Firstly, we show the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$ transition at 1.85~{\AA} for a sightline 
+of 80\degree in Figure \ref{figure:line25}. This is calculated using the same ray tracing technique as discussed 
+by \cite{2015ApJ...807..107H}. The equivalent width (EW) is very similar for all the lines (because they are all 
+saturated) at about 5-6~eV. 
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/80_degrees_fe25.eps}
+\caption{Simulated line profile for the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$
+transition at 1.85~{\AA}, as viewed from $i = 80\degree$ for a range
+of luminosities.}
+\label{figure:line25}
+\end{figure}
+
+There are two interesting observations to be made from this plot. Firstly, the maximum velocity seen in 
+the line increases with luminosity. Secondly, there is a notable difference between the line two lower luminosity 
+profiles and the higher pair. All lines exhibit some absorption at about $\rm{+100~kms^{-1}}$, due to thermal 
+broadening of absorption from stationary or slow moving material. However for the 4 per cent and 10 percent 
+cases the feature is almost black at $\rm{0~kms^{-1}}$ indicating the presence of more slow moving material than 
+in the 30 and 60 per cent cases. As discussed in Section \ref{Section:B83}, the two higher luminosity runs
+are in the ``isothermal'' part of Figure \ref{figure:regions} and the gas in these cases would be expected to 
+be more impulsively heated. Whist the gas does not reach the Compton temperature in either case, the 
+shape of the lines does point to a faster heating process and a quicker acceleration. 
+
 
 Another line commonly seen in XRB winds is the Lyman $\alpha$ resonance 
 line of Fe~\textsc{xxvi} which is actually a doublet with components at
@@ -446,7 +475,8 @@ are slightly less
 saturated and hence there is a range of EWs for the doublet, ranging from -8~eV for the 4\% $\rm{L_{Edd}}$
 run to -16~eV for the 60\% luminosity. The run at the Eddington luminosity 
 has an EW of almost 20eV, but this should be treated with caution because of the lack
-of radiation driving in our simulation.
+of radiation driving in our simulation. If radiation driving is important as would be expected then one would expect
+a significantly larger EW.
 
 The current generation of X-ray spectrometers are unable to split this feature
 into its components; for example the wavelength resolution of the \emph{Chandra}
@@ -467,19 +497,11 @@ observed with the \emph{Chandra} HETG with a resolution of 0.012\AA~(thick lines
 \label{figure:line26_smooth}
 \end{figure}
 
-\textcolor{red}{I'm unsure about what can we really say
-here regarding the smoothed line profile. Clearly the line width is huge - I started out thinking I'd 
-write here about how the 
-huge width might mean we kind of see absorption at huge blue shifts (out to the thousands of km/s 
-that is reported in some sources - but in reality presumably
-observer would fit a Gaussian to this and get a blue shift of a hundred km/s ish w.r.t. to rest
-wavelength they normally quote of 1.78\AA. Not sure that the evidence is here to ruffle feathers}
-
-
-\todo[inline]{Poasible add some sentences regarding the observed EW and how they compare. ksl}
-
-
-
+The EW of observed disk winds are mostly around 10-30eV \cite{2012MNRAS.422L..11P}, similar to the 
+values we obtain here. The velocities are higher however, ranging between about 400-3000 $\rm{kms^{-1}}$
+\cite{2016AN....337..368D}. It is possible that the including of continuum driving would accelerate the winds
+to higher velocities. This would tend to increase the EW since the lines in our simulations are black in 
+places, and this dense gas would presumably end up more distributed in velocity space. 
 
 
 \subsection{Kinetic Luminosity}
