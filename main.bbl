@@ -17,6 +17,12 @@
   {mn@eprint@\@tempb}{\@tempb:\@tempc}{\expandafter \expandafter \csname
   mn@eprint@\@tempb\endcsname \expandafter{\@tempc}}}
 
+\bibitem[\protect\citeauthoryear{{Abramowicz}, {Czerny}, {Lasota}  \&
+  {Szuszkiewicz}}{{Abramowicz} et~al.}{1988}]{1988ApJ...332..646A}
+{Abramowicz} M.~A.,  {Czerny} B.,  {Lasota} J.~P.,   {Szuszkiewicz} E.,  1988,
+  \mn@doi [\apj] {10.1086/166683}, \href
+  {http://adsabs.harvard.edu/abs/1988ApJ...332..646A} {332, 646}
+
 \bibitem[\protect\citeauthoryear{{Allen}, {Schulz}, {Homan}, {Neilsen}, {Nowak}
    \& {Chakrabarty}}{{Allen} et~al.}{2018}]{2018ApJ...861...26A}
 {Allen} J.~L.,  {Schulz} N.~S.,  {Homan} J.,  {Neilsen} J.,  {Nowak} M.~A.,
@@ -137,6 +143,12 @@
   {10.1111/j.1365-2966.2006.10954.x}, \href
   {http://adsabs.harvard.edu/abs/2006MNRAS.372.1366K} {372, 1366}
 
+\bibitem[\protect\citeauthoryear{{Lasota}, {Vieira}, {Sadowski}, {Narayan}  \&
+  {Abramowicz}}{{Lasota} et~al.}{2016}]{2016A&A...587A..13L}
+{Lasota} J.-P.,  {Vieira} R.~S.~S.,  {Sadowski} A.,  {Narayan} R.,
+  {Abramowicz} M.~A.,  2016, \mn@doi [\aap] {10.1051/0004-6361/201527636},
+  \href {http://adsabs.harvard.edu/abs/2016A%26A...587A..13L} {587, A13}
+
 \bibitem[\protect\citeauthoryear{{Long} \& {Knigge}}{{Long} \&
   {Knigge}}{2002}]{2002ApJ...579..725L}
 {Long} K.~S.,  {Knigge} C.,  2002, \mn@doi [\apj] {10.1086/342879}, \href
@@ -182,6 +194,12 @@
 {Nowak} M.~A.,  1995, \mn@doi [\pasp] {10.1086/133679}, \href
   {http://adsabs.harvard.edu/abs/1995PASP..107.1207N} {107, 1207}
 
+\bibitem[\protect\citeauthoryear{{Okuda}, {Teresi}, {Toscano}  \&
+  {Molteni}}{{Okuda} et~al.}{2005}]{2005MNRAS.357..295O}
+{Okuda} T.,  {Teresi} V.,  {Toscano} E.,   {Molteni} D.,  2005, \mn@doi
+  [\mnras] {10.1111/j.1365-2966.2005.08647.x}, \href
+  {http://adsabs.harvard.edu/abs/2005MNRAS.357..295O} {357, 295}
+
 \bibitem[\protect\citeauthoryear{{Owen}, {Clarke}  \& {Ercolano}}{{Owen}
   et~al.}{2012}]{2012MNRAS.422.1880O}
 {Owen} J.~E.,  {Clarke} C.~J.,   {Ercolano} B.,  2012, \mn@doi [\mnras]
@@ -199,6 +217,13 @@
   J.,   {Coriat} M.,  2012, \mn@doi [\mnras]
   {10.1111/j.1745-3933.2012.01224.x}, \href
   {http://adsabs.harvard.edu/abs/2012MNRAS.422L..11P} {422, 11}
+
+\bibitem[\protect\citeauthoryear{{Ponti}, {Bianchi}, {Mu{\~n}oz-Darias}, {De},
+  {Fender}  \& {Merloni}}{{Ponti} et~al.}{2016}]{2016AN....337..512P}
+{Ponti} G.,  {Bianchi} S.,  {Mu{\~n}oz-Darias} T.,  {De} K.,  {Fender} R.,
+  {Merloni} A.,  2016, \mn@doi [Astronomische Nachrichten]
+  {10.1002/asna.201612339}, \href
+  {http://adsabs.harvard.edu/abs/2016AN....337..512P} {337, 512}
 
 \bibitem[\protect\citeauthoryear{{Proga}, {Stone}  \& {Kallman}}{{Proga}
   et~al.}{2000}]{2000ApJ...543..686P}

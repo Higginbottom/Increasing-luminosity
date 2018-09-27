@@ -343,7 +343,7 @@ that would become increasingly important as the luminosity approaches $L_{Edd}$.
 It is clear from these images that the velocity of the outflows increases with luminosity, as does the 
 density in the wind. Some useful parameters showing this are given in the lower part of Table \ref{table:wind_param}.
 As one would expect, the mass-loss rate through the outer boundary, which is essentially a function of these 
-two parameters also increases with luminosity. We will discuss this further in Section \ref{section:discussion}
+two parameters also increases with luminosity. We will discuss this further in the next section.
 
 
 
@@ -426,13 +426,24 @@ B the gas temperature still exceeds the temperature needed to escape at the radi
 whereas in region C it does not even reach that temperature and so the gas remains gravitationally
 bound.
 
-B83 found that their model did not yield a clear dividing line between bound and unbound solutions 
-at $\omega=R_{IC}$ and W96 found that a more reasonable location for this cutoff was $\omega=0.1 R_{IC}$.
-Our 4 per cent simulation represents about $0.5 L_{crit}$ and is shown on Figure \ref{figure:regions} as the lowest 
-horizontal dashed line. The 10 per cent simulation (next horizontal line up) has a luminosity just below $L_{crit}$ 
-and it is therefore tempting ascribe the difference in the line profile around 0 $kms^{-1}$ to the change from 
-region D/C to region E/B with the gas being more impulsively heated at the higher luminosities and hence 
-accelerating more quickly. 
+B83, found that their analysis did not yield a clear dividing line between bound and unbound solutions 
+at $\rm{\omega=R_{IC}}$ and W96 found that a more reasonable location for this cutoff was 
+$\rm{\omega=0.1 R_{IC}}$.
+Our 4 per cent simulation represents about $\rm{0.5 L_{crit}}$ and is shown on Figure \ref{figure:regions} as the lowest 
+horizontal dashed line. The 10 per cent simulation (next horizontal line up) has a luminosity just below $\rm{L_{crit}}$ 
+and
+the two higher luminosity cases are above $\rm{L_{crit}}$. We would therefore expect to see a clear difference between the lowest luminosity case and the two higher cases with gas impulsively heated to the Compton
+temperature in the latter. However, although the outflowing gas gets hotter as the luminosity increases in no
+case does it approach $\rm{T_{IC}}$. In fact we see that, as the gas expands and accelerates
+away, adiabatic cooling increases quickly and balances Compton heating and X-ray heating in much of the wind. The gas heats up initially, reaching a peak temperature at a distance of about $R_{IC}$ along the streamline of between
+about $1\times10^6$~K for the low luminosity case and $6\times10^6$~K for $L=L_{Edd}$. The temperature then starts to
+drop. The Bernoulli function is negative at the streamline roots, but then
+increases along all streamlines despite a slow decrease in gas enthalpy. This demonstrates that the heating is
+sufficient to provide the work to lift the gas out of the potential well - and also accelerate the gas producing a
+significant increase in kinetic energy along the streamlines. The kinetic energy also includes a significant component
+due to the rotational velocity - angular momentum is conserved along streamlines so this drops as the gas moves 
+outward.
+
 
 
 
@@ -501,37 +512,46 @@ The EW of observed disk winds are mostly around 10-30eV \cite{2012MNRAS.422L..11
 values we obtain here. The velocities are higher however, ranging between about 400-3000 $\rm{kms^{-1}}$
 \cite{2016AN....337..368D}. It is possible that the including of continuum driving would accelerate the winds
 to higher velocities. This would tend to increase the EW since the lines in our simulations are black in 
-places, and this dense gas would presumably end up more distributed in velocity space. 
+places, and this dense gas would be more distributed in velocity space. 
 
 
 \subsection{Kinetic Luminosity}
+
 Whilst the mass loss is of interest when considering how the wind could affect the 
 accretion flow through the disk, it is also interesting to consider what (if any) effect the
 wind could have on the surroundings. The kinetic energy carried by the wind is a
 good measure of this, and so we calculate this via a simple summation around the outer
-edge of the domain of mass loss rate x radial velocity. 
-
-
-
+edge of the domain. 
 
 \begin{figure}
-\includegraphics[width=\columnwidth]{figures/lum_vs_ke.eps}
-\caption{Kinetic energy transported by the wind normalised to the source
-luminosity as a function of source luminosity.}
+\includegraphics[width=\columnwidth]{figures/lum_vs_ke_ponti.eps}
+\caption{Kinetic energy transported by the wind  as a function of source luminosity, both
+normalised to the Eddington luminosity. Crosses are for this work, the other symbols represent
+date from
+\protect\cite{2016AN....337..512P}, the symbols code for different sources as in Figure \ref{figure:mdot_vs_lum}.
+The diagonal lines show theoretical calculations of kinetic luminosity assuming a 0.1 per cent conversion
+from luminosity to kinetic energy for disks with 1\degree, 6\degree~ and 40\degree~ total flare.}
 \label{figure:ke_vs_lum}
 \end{figure}
 
-Figure \ref{figure:ke_vs_lum} clearly shows a dramatic increase in the 'Kinetic
-efficiency" of the wind up to about $0.5L_{Edd}$ at which point it seems to
-reach an asymptotic value of $6\times10^{-5}$ meaning that the wind is 
-capturing about 0.006 per cent of the luminosity of the central source and converting
-it into kinetic energy.
-\textcolor{red}{Is this a physically significant number? It is tempting to think one 
-could compute some kind of geometrical interpretation - but the wind covers much
-more than this tiny percentage of the sky as seen by the central source so there
-is more to it. In some ways it is more fundamental than the mass loss rate, although
-probably less important because clearly such small K.Es wont really do much damage
-outside the system.}
+The results are plotted in Figure \ref{figure:ke_vs_lum} together with observed values from
+\cite{2016AN....337..512P} for the same sources as plotted in Figure \ref{figure:mdot_vs_lum}. 
+Taking into account the flare of the disk (which is 4\degree~ for the lowest luminosity rising to 6\degree for
+the $\rm{L=L_{Edd}}$ run the efficiency of conversion from intercepted radiative luminosity into kinetic 
+energy is about 0.1 per cent for our runs with $\rm{L \geq 0.2L_{Edd}}$. For the two lower luminosity runs,
+the efficiency is lower, at 0.04 percent for $\rm{0.04L_{Edd}}$ and 0.06 per cent for $\rm{0.1L_{Edd}}$.
+Interestingly these are the two runs where the luminosity is below $\rm{L_{crit}}$.
+
+The flare seen in our simulations is a function of the radiative transfer process as discussed earlier, and we 
+do not include any underlying flare in the accretion disk. It has been shown that at high Eddington fractions,
+accretion disks tend to puff up to larger scale heights \citep[][but also see \citealt{2016A&A...587A..13L}]{1988ApJ...332..646A,2005MNRAS.357..295O} and so we would
+expect such a disk to intercept a greater fraction of the incoming radiation. This could explain the way in which 
+the observed kinetic energy flux dramatically increases at luminosities greater than 30 percent Eddington. The
+diagonal lines show the relationship between radiative and kinetic luminosity for 1\degree,~6\degree and 40\degree~
+total disk flare angles. We see that as expected our results tend to the 6\degree~ line, and if the efficiency is 
+the same at all higher luminosities we would require a disk opening angle of 40\degree~ to explain the high 
+luminosity results. It is possible that the efficiency could also increase when radiation driving is included.
+
 
 \subsection{Effect of radiation driving}
 
@@ -553,9 +573,10 @@ noting that for the 60 per cent and 100 per cent Eddington runs, the mass-loss
 rate per unit area is approximately proportional to $R^{-1.5}$. If all the radii
 interior to where the wind current arises were to follow this relationship, then the 
 mass-loss would increase by a factor of about 1.5. 
-
 We might also 
-expect somewhat higher velocities in the outflow, due to the additional force. 
+expect somewhat higher velocities in the outflow, due to the additional force, which could also
+increase the efficiency of conversion from radiative luminosity into kinetic luminosity as previously
+mentions. 
 We are planning to include this effect in our next set of simulations.
 
 
