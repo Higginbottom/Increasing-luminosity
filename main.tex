@@ -102,15 +102,17 @@ BT7 1NN, UK\\
 Signatures of outflowing gas have been observed in a number of low-mass X-ray binaries. The fact that a majority of these systems exhibit dipping behavior suggests that 
 that the outflowing gas is in the form 
 of equatorial disk winds. Although the mechanism for the launch and acceleration of these winds is debated, it is very likely
-that thermal driving at least contributes to the overall picture. Our previous radiation-hydrodynamic simulations of a fiducial X-ray binary indicate that thermal heating can drive significant outflows (with outflow mass from the outer parts of the disk exceeding the accretion rate onto the cenral black hole).
+that thermal driving contributes to the overall picture. Our previous radiation-hydrodynamic simulations of a fiducial X-ray binary indicate that thermal heating can drive significant outflows (with outflow mass from the outer parts of the disk exceeding the accretion rate onto the central black hole).
 % It has been previously demonstrated that thermal winds are able to drive significant outflows (with outflow mass
 %from outer parts of the disk exceeding the accretion rate in the inner disk required to explain the observed source
 %luminosities. 
 Here we use the same operator splitting method to carry out radiation-hydrodynamic simulations of a thermally driven 
 disk wind for a range of source luminosities. We find that as the luminosity increases, the wind efficiency (the mass outflow
-rate scaled to the assumed mass accretion rate) remains constant as a factor of about two. This is in agreement
+rate scaled to the assumed mass accretion rate) remains approximately constant, 
+$\dot{M}_{wind}=2\dot{M}_{acc}$. 
+This is in agreement
 with both observations and previous theoretical work. We also find that the maximum velocity seen in a simulated 
-absorption line increases with luminosity. 
+absorption lines of Fe \textsc{xxv} and Fe {xxvi} increase with luminosity. 
 
 
 
@@ -144,13 +146,14 @@ systems are in the ``High-soft'' state, where the accretion disk is thought to e
 central compact object \cite[][although also see \citealt{2016ApJ...830L...5H}]{2012MNRAS.422L..11P}. This high luminosity state is in contrast to the ``low-hard'' state
 where the inner edge of the accretion disk appears to be truncated and emission is primarily arising from a Comptonised
 corona. If the disk-wind carries away enough material from the accretion disk then this provides a mechanism for
-destabilising the disk and so providing a mechanism for a state change \cite{1986ApJ...306...90S}. We are
+destabilising the disk and so providing a mechanism for a state change \citep{1986ApJ...306...90S}. We are
 interested in developing a theoretical model for these disk winds with an eye to predicting the mass-loss rate
 and hence testing the possibility that such winds are indeed responsible for state change. 
 The driving mechanism for these disk winds is a topic of much debate and active research, however there are broadly
 three contenders -- radiation driving, thermal driving, and magneto-centric driving. 
 
-Firstly, radiation driving of winds is simply caused by a transfer of momentum from radiation to matter via Compton
+The first possibility, radiation driving, is that winds develop as a result of 
+ a transfer of momentum from radiation to matter via Compton
 scattering or of scattering (mainly UV) radiation
 from bound-bound lines in ionised material. If the ionisation state of the gas is 
 favourable, then this latter line driving mechanism can
@@ -164,8 +167,8 @@ approaching or even exceeding the Eddington limit, and so radiation driving via 
 may be sufficient to affect the
 flow.
 
-Secondly, thermal driving is the case where gas is heated to a temperature at which the thermal velocity of the 
-gas exceeds
+The second hypothesis, thermal driving, occurs if gas is heated to a temperature at which the thermal velocity of 
+the gas exceeds
 the local escape velocity. In this case, mass-loss is inevitable and if the geometry is suitable (for example a
 geometrically thin accretion disk) then a wind can be produced. This mechanism is particularly attractive in 
 X-ray binaries, where the relatively high temperature of the radiation produced by the inner parts of a black-hole or 
@@ -196,13 +199,13 @@ on a wire.
 
 Most likely, all three mechanisms are at play, perhaps changing their importance depending on the
 geometry and accretion state of the source in question. Of the three mechanisms, thermal driving is 
-particularly interesting because it is almost certain to 
+particularly interesting in X-ray binaries because it is almost certain to 
 operate on some level wherever there is strongly heated gas and a disk of sufficient radial extent that hot gas 
 can escape. Indeed, this mechanism might not only be important in X-ray binaries but also in protoplanetary systems \cite[e.g.][]{2012MNRAS.422.1880O} and AGN \cite[e.g.][]{2018MNRAS.476.4395B}.
 
 The existence of thermally driven outflows from accretion disks has been postulated since such disks were themselves
 first considered \citep{1973A&A....24..337S}. More detailed theoretical treatment of thermal winds \citep{1983ApJ...271...70B} suggested that the mass-loss could be sufficient to destabilise the disk \citep{1986ApJ...306...90S}.
-As computer power improved, more detailed hydrodynamic simulations  \citep{1996ApJ...461..767W,2006ApJ...652L.117N,2010ApJ...719..515L,2015ApJ...807..107H} underlined the earlier predications of large mass-loss rates and also showed that thermal winds could provide a source of observed blue shifted absorption lines.
+As computer power improved, more detailed hydrodynamic simulations  \citep{1996ApJ...461..767W,2006ApJ...652L.117N,2010ApJ...719..515L,2015ApJ...807..107H} have provided support for the earlier predications of large mass-loss rates and also showed that thermal winds could provide a source of observed blue shifted absorption lines.
 
 Although very large mass-loss rates are possible through thermal winds, the actual rate is very 
 dependant on the details
@@ -223,7 +226,7 @@ suggest that the wind efficiency (mass loss rate divided by mass accretion rate)
 (P12, although this relationship is driven by observations of a single exceptional source) whilst recent theoretical work 
 suggests that the wind efficiency tends to a constant value \citep[][hereafter D18]{2018MNRAS.473..838D}.
 
-Here, we extend the radiation hydrodynamic simulations to higher 
+Here, we extend our radiation hydrodynamic simulations to higher 
 luminosities in order to investigate the effect on mass loss rate and velocity in the resulting outflows. 
 As discussed in Section \ref{section:method}, we  use the same technique as H18 with slight modifications for varying the luminosity.
 We then present our results in Section \ref{section:results} before making comparisons to observations in Section \ref{section:discussion}.
@@ -240,18 +243,17 @@ from a central source through the wind. We use the hydrodynamic code {\sc zeus}
  radiative transfer code {\sc python} \citep[][extended by \citealt{,2013MNRAS.436.1390H} and 
  \citealt{2015MNRAS.450.3331M}]{2002ApJ...579..725L}. 
 
-Since thermal winds are expected to arise at or just inside $\rm{R_{IC}}$ which is independent of the source 
+Since thermal winds are expected to arise at or just inside $\rm{R_{IC}}$, which is independent of the source 
 luminosity, we leave the simulation geometry unchanged
 from H18, and simply increase the luminosity. We use the same logarithmic grid, the parameters of which are given in the upper
 part of Table \ref{table:wind_param}. The mid-plane of the simulation space is set up with a constant 
 density boundary condition, forming a mass reservoir for any resulting outflow. The value of this constant density
-is important, since the wind is generated when the ionization parameter is at a critical value $\xi_{cool,max}$ which
+is important, since the wind is generated when the ionization parameter reaches the critical value $\xi_{cool,max}$ which
 represents the maximum ionization parameter for gas on the `cool branch' of the thermal stability curve. Gas with
 $\xi<\xi_{cool,max}$ has a stable temperature of a few tens of thousands K where line/recombination cooling 
 balances photoionization heating. 
 
-As the 
-ionization parameter increases past this value the gas becomes thermally unstable and heats up rapidly. 
+At higher ionization parameters, the gas becomes thermally unstable and heats up rapidly. 
 This heating causes expansion and
 a wind is driven. We refer to the part of the wind where this acceleration occurs as the acceleration zone.
 In the optically thin limit one can set the mid-plane density so that gas at the mid-plane has
@@ -264,8 +266,8 @@ but also on the density of the developing wind along the
 sightline back to the source. 
 We therefore set the mid-plane density using the optically thin ionisation parameter,
 finding that a small wedge of static material does form due to optical depth effects. However the extent of this does not significantly
-affect the resolution in the acceleration zone. The mid-plane density, $\rho_0$ is given in Table
-\ref{table:wind_param} and is proportional to the increasing luminosity, thereby preserving the same
+affect the resolution in the acceleration zone. The mid-plane densities we have used are given in Table 
+\ref{table:wind_param}. They are proportional to the source luminosity,  thereby preserving the same
 ionization parameter (in the optically thin approximation).
 
 All other aspects of the simulation are identical to that described by H18, including a truncation of the 
@@ -280,7 +282,7 @@ Luminosity ($\rm{L_{edd}}$) & 0.04 & 0.1 & 0.3 & 0.6 \\
 $\rm{M_{BH}~(M_{\odot})}$  & 7 & 7 & 7 &7\\
 $\rm{T_x~(10^7~}$K)  & 5.6 & 5.6 & 5.6  & 5.6\\
 $\rm{L_x~(10^{37}}~\rm{ergs~s^{-1}})$&  3.3& 8.25 &  24.75 &49.5\\
-$\rm{\dot{M}_{acc}~(10^{17}}~\rm{ergs~s^{-1}})$&  4.42 & 11.1 &  33.2 &66.3\\
+$\dot{\rm{M}}_{\rm{acc}}~(10^{17}~\rm{ergs~s^{-1}})$&  4.42 & 11.1 &  33.2 &66.3\\
 $\rm{\log(\xi_{cold,max})}$&   1.35 & 1.35 & 1.35 & 1.35 \\
 $\rm{T_{eq}(\xi_{cold,max})~(10^3~K)}$ &  50.7 &  50.7 & 50.7 & 50.7 \\
 $\rm{\rho_0~(10^{-12}~g~cm^{-3})}$  & 16.0 & 40 & 120 & 240 \\
@@ -332,8 +334,8 @@ Because we increase the mid-plane density in proportion to the luminosity in ord
 a fixed ionization parameter at the base of the wind, the shape of the disk structure slightly changes as
 the luminosity increases. In all cases, at the inner radial edge, the disk/wind interface occurs at 
 around 89\degree~from the z-axis (i.e. 1\degree~ above the mid-plane). For the original $\rm{0.04L_{Edd}}$ 
-simulation, the angle at which the interface occurs decreases to about 88\degree~ by the maximum radial
-extent of the disk, whereas for the $\rm{L_{Edd}}$ simulation, the interface is about a degree further from the
+simulation, the angle at which the interface occurs decreases to about 88\degree~ at the outer edge, whereas for 
+the $\rm{L_{Edd}}$ simulation, the interface is about a degree further from the
 midplane at 87\degree.
 
 Density contour plots for some of the resulting outflows are shown in Figure \ref{figure:wind_small_image}.
@@ -343,7 +345,12 @@ that would become increasingly important as the luminosity approaches $L_{Edd}$.
 It is clear from these images that the velocity of the outflows increases with luminosity, as does the 
 density in the wind. Some useful parameters showing this are given in the lower part of Table \ref{table:wind_param}.
 As one would expect, the mass-loss rate through the outer boundary, which is essentially a function of these 
-two parameters also increases with luminosity. We will discuss this further in the next section.
+two parameters also increases with luminosity. We will discuss this further in the next section. The velocity field 
+becomes somewhat more `spherical' as the luminosity increase, however the nature of the wind is still equatorial.
+This is because the density distribution is still concentrated towards the mid-plane. Having said that, since the overall
+density increases, a given column density is reached further from the midplane as the density increases.
+\textcolor{red}{possibility of numbers here to discuss the angle at which a given $N_H$ or EW 
+in a given line is reached}.
 
 
 
@@ -354,19 +361,19 @@ two parameters also increases with luminosity. We will discuss this further in t
 
 \subsection{Mass-loss rates}
 
-The mass-loss rates listed in Table \ref{table:wind_param} 
-increases as the luminosity of the central source increases however it is interesting to compare
-these rates with the assumed accretion rate required to generate the luminosity. When we do 
-this we find that the mass-loss through the wind is always roughly double the accretion rate.
-This `wind efficiency' relationship is similar to that found in the analysis carried out by \cite{2018MNRAS.473..838D}
+The mass-loss rates ($\dot{\rm{M}}_{\rm{wind,outer}}$) listed in Table \ref{table:wind_param}  
+increase as the luminosity of the central source increases. However when we  compare these values to the implied
+accretion rate ($\dot{\rm{M}}_{\rm{acc}}$) we find that $\dot{\rm{M}}_{\rm{wind,outer}}\simeq2\dot{\rm{M}}_{\rm{acc}}$
+for all cases.
+This constant `wind efficiency' is similar to that found in the analysis carried out by \cite{2018MNRAS.473..838D}
 who found that for a disk of our size ($R_{out}=2R_{IC}$) and a Compton temperature
 very close to ours the wind efficiency peaked at just over two for a luminosity close to our lowest luminosity.
 They then see the efficiency decrease slowly with increasing luminosity, 
 always remaining above one. Our wind efficiencies are slightly larger than theirs, which is interesting since
 we neglect any radiation driving effects, which they include via an approximate correction. 
 
-The wind efficiency for a range of observed XRB winds is given by \cite{2012MNRAS.422L..11P} and
-it is instructive to compare our results with these observations. Figure \ref{figure:mdot_vs_lum} shows 
+The wind efficiency for a range of observed XRB winds is given by \cite{2012MNRAS.422L..11P}.
+It is instructive to compare our results with these observations. Figure \ref{figure:mdot_vs_lum} shows 
 this comparison, with the black symbols referring to the observations and the red stars showing the
 results of these simulations. 
 
@@ -381,13 +388,13 @@ is at $\rm{\dot{M}_{wind}/\dot{M}_{acc}}$=2.0.}
 \label{figure:mdot_vs_lum}
 \end{figure}
 
-At first sight, our prediction of a constant wind efficiency does not
-agree well with the observations, which appear to suggest an increase of wind efficiency with
-luminosity. However, the trend suggesting an increase in wind efficiency with luminosity is largely driven 
+At first sight, our prediction of a constant wind efficiency does not appear to
+agree with the observations, which appear to suggest an increase of wind efficiency with
+luminosity. However, the increase in wind efficiency with luminosity is largely driven 
 by observations of just one source - GRS 1915 +105.  This is an exceptional source, which has been 
-accreting close to the Eddington limit since its discovery in 1992 \citep{1994ApJS...92..469C,
-2017MNRAS.468.4748C} never
-entering quiescence. It also exhibits unusual SEDs, not corresponding exactly to the normal high/soft,
+accreting close to the Eddington limit since its discovery in 1992  never
+entering quiescence \citep{1994ApJS...92..469C,2017MNRAS.468.4748C}. 
+It also exhibits unusual SEDs, not corresponding to the normal high/soft,
 low/hard spectral states \citep{2016ApJ...833..165Z}. Finally, with an orbital period of 34 days 
 \citep{2014SSRv..183..223C} this is by far the largest system - and could perhaps host a signficantly
 larger accretion disk than we include in our model. This complex source requires more detailed
@@ -417,8 +424,8 @@ lines represent the luminosity and disk extent of the simulations in H18
 \end{figure}
 
 The different regions designate different types of outflow or static atmosphere, and are a consequence of
-how quickly the plasma is heated. The regions in the lower half of the model exhibit slow heating 
-whilst regions in the upper half show rapid heating to the Compton temperature. The regions on the
+how quickly the plasma is heated. The regions in the lower half of the Figure heat slowly 
+whilst regions in the upper half heat rapidly to the Compton temperature. The regions on the
 right hand side are where gas at the Compton temperature would be expected to escape, whilst on the 
 left hand side the gas is gravitationally bound and so forms an atmosphere rather than a wind. 
 In regions B and C, the gas flows outwards too quickly to be heated to the Compton temperature. In region
@@ -426,8 +433,8 @@ B the gas temperature still exceeds the temperature needed to escape at the radi
 whereas in region C it does not even reach that temperature and so the gas remains gravitationally
 bound.
 
-B83, found that their analysis did not yield a clear dividing line between bound and unbound solutions 
-at $\rm{\omega=R_{IC}}$ and W96 found that a more reasonable location for this cutoff was 
+B83 found that there was not a clear dividing line between bound and unbound solutions 
+at $\rm{\omega=R_{IC}}$. W96 found that a more reasonable location for this cutoff was 
 $\rm{\omega=0.1 R_{IC}}$.
 Our 4 per cent simulation represents about $\rm{0.5 L_{crit}}$ and is shown on Figure \ref{figure:regions} as the lowest 
 horizontal dashed line. The 10 per cent simulation (next horizontal line up) has a luminosity just below $\rm{L_{crit}}$ 
@@ -436,13 +443,18 @@ the two higher luminosity cases are above $\rm{L_{crit}}$. We would therefore ex
 temperature in the latter. However, although the outflowing gas gets hotter as the luminosity increases in no
 case does it approach $\rm{T_{IC}}$. In fact we see that, as the gas expands and accelerates
 away, adiabatic cooling increases quickly and balances Compton heating and X-ray heating in much of the wind. The gas heats up initially, reaching a peak temperature at a distance of about $R_{IC}$ along the streamline of between
-about $1\times10^6$~K for the low luminosity case and $6\times10^6$~K for $L=L_{Edd}$. The temperature then starts to
-drop. The Bernoulli function is negative at the streamline roots, but then
-increases along all streamlines despite a slow decrease in gas enthalpy. This demonstrates that the heating is
+about $1\times10^6$~K for the low luminosity case and $6\times10^6$~K for $L=L_{Edd}$. The temperature then starts dropping. 
+
+The Bernoulli parameter is given by $Be\equiv\bold{v}^2+\gamma P/(\gamma-1)\rho-GM_{bh}/r$, where the first
+term is the kinetic energy of the gas with velocity $\bold{v}$, the second term is the gas enthalpy and the third
+term is the gravitational potential. $Be$ is negative at the streamline roots; the gas is gravitationally bound at 
+this point. It then increases along all streamlines despite a slow decrease in gas enthalpy and becomes positive
+. 
+This demonstrates that the heating is
 sufficient to provide the work to lift the gas out of the potential well - and also accelerate the gas producing a
 significant increase in kinetic energy along the streamlines. The kinetic energy also includes a significant component
-due to the rotational velocity - angular momentum is conserved along streamlines so this drops as the gas moves 
-outward.
+due to the rotational velocity - angular momentum is conserved along streamlines so the rotational velocity drops 
+as the gas moves outward.
 
 
 
@@ -450,10 +462,9 @@ outward.
 
 
 \subsection{Line Shape}
-We have also computed some simulated absorption line profiles, which give more insight into the velocities 
-in the wind.
-Firstly, we show the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$ transition at 1.85~{\AA} for a sightline 
-of 80\degree in Figure \ref{figure:line25}. This is calculated using the same ray tracing technique as discussed 
+We have also computed some simulated absorption line profiles.
+Firstly, in Figure \ref{figure:line25} we show the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$ transition at 1.85~{\AA} for a 
+sightline  of 80\degree . This is calculated using the same ray tracing technique as discussed 
 by \cite{2015ApJ...807..107H}. The equivalent width (EW) is very similar for all the lines (because they are all 
 saturated) at about 5-6~eV. 
 
@@ -468,7 +479,7 @@ of luminosities.}
 There are two interesting observations to be made from this plot. Firstly, the maximum velocity seen in 
 the line increases with luminosity. Secondly, there is a notable difference between the line two lower luminosity 
 profiles and the higher pair. All lines exhibit some absorption at about $\rm{+100~kms^{-1}}$, due to thermal 
-broadening of absorption from stationary or slow moving material. However for the 4 per cent and 10 percent 
+broadening of absorption from stationary or slow moving material. However for the 4 per cent and 10 per cent 
 cases the feature is almost black at $\rm{0~kms^{-1}}$ indicating the presence of more slow moving material than 
 in the 30 and 60 per cent cases. As discussed in Section \ref{Section:B83}, the two higher luminosity runs
 are in the ``isothermal'' part of Figure \ref{figure:regions} and the gas in these cases would be expected to 
@@ -479,7 +490,7 @@ shape of the lines does point to a faster heating process and a quicker accelera
 Another line commonly seen in XRB winds is the Lyman $\alpha$ resonance 
 line of Fe~\textsc{xxvi} which is actually a doublet with components at
 1.778~{\AA} and 1.783~{\AA}. The ray traced absorption profile for this 
-feature is given as the fine lines in Figure \ref{figure:line26_smooth}. The absorption profile
+feature is given as the thin lines in Figure \ref{figure:line26_smooth}. The absorption profile
 as a function of velocity in each of the two lines is almost identical to that seen in the 
 Fe \textsc{xxv} feature shown in Figure \ref{figure:line25} but these features
 are slightly less
@@ -491,8 +502,7 @@ a significantly larger EW.
 
 The current generation of X-ray spectrometers are unable to split this feature
 into its components; for example the wavelength resolution of the \emph{Chandra}
-HETG is 0.012\AA~ compared to the feature spacing of 0.005\AA. (\emph{Swift} XRT = 0.05\AA,
-\emph{NuStar} = 0.06\AA)
+HETG is 0.012\AA~ compared to the feature spacing of 0.005\AA.
  Therefore the feature is always observed as a single line. The heavy lines in Figure 
  \ref{figure:line26_smooth}
 show the line pair smoothed by a Gaussian to reproduce the appearance of this line
@@ -508,7 +518,9 @@ observed with the \emph{Chandra} HETG with a resolution of 0.012\AA~(thick lines
 \label{figure:line26_smooth}
 \end{figure}
 
-The EW of observed disk winds are mostly around 10-30eV \cite{2012MNRAS.422L..11P}, similar to the 
+The EW of lines observed in X-ray binary disk winds are mostly around 10-30eV 
+\cite{2012MNRAS.422L..11P}, 
+similar to the 
 values we obtain here. The velocities are higher however, ranging between about 400-3000 $\rm{kms^{-1}}$
 \cite{2016AN....337..368D}. It is possible that the including of continuum driving would accelerate the winds
 to higher velocities. This would tend to increase the EW since the lines in our simulations are black in 
@@ -539,14 +551,14 @@ The results are plotted in Figure \ref{figure:ke_vs_lum} together with observed 
 Taking into account the flare of the disk (which is 4\degree~ for the lowest luminosity rising to 6\degree for
 the $\rm{L=L_{Edd}}$ run the efficiency of conversion from intercepted radiative luminosity into kinetic 
 energy is about 0.1 per cent for our runs with $\rm{L \geq 0.2L_{Edd}}$. For the two lower luminosity runs,
-the efficiency is lower, at 0.04 percent for $\rm{0.04L_{Edd}}$ and 0.06 per cent for $\rm{0.1L_{Edd}}$.
+the efficiency is lower, at 0.04 per cent for $\rm{0.04L_{Edd}}$ and 0.06 per cent for $\rm{0.1L_{Edd}}$.
 Interestingly these are the two runs where the luminosity is below $\rm{L_{crit}}$.
 
 The flare seen in our simulations is a function of the radiative transfer process as discussed earlier, and we 
 do not include any underlying flare in the accretion disk. It has been shown that at high Eddington fractions,
 accretion disks tend to puff up to larger scale heights \citep[][but also see \citealt{2016A&A...587A..13L}]{1988ApJ...332..646A,2005MNRAS.357..295O} and so we would
 expect such a disk to intercept a greater fraction of the incoming radiation. This could explain the way in which 
-the observed kinetic energy flux dramatically increases at luminosities greater than 30 percent Eddington. The
+the observed kinetic energy flux dramatically increases at luminosities greater than 30 per cent Eddington. The
 diagonal lines show the relationship between radiative and kinetic luminosity for 1\degree,~6\degree and 40\degree~
 total disk flare angles. We see that as expected our results tend to the 6\degree~ line, and if the efficiency is 
 the same at all higher luminosities we would require a disk opening angle of 40\degree~ to explain the high 
@@ -576,8 +588,11 @@ mass-loss would increase by a factor of about 1.5.
 We might also 
 expect somewhat higher velocities in the outflow, due to the additional force, which could also
 increase the efficiency of conversion from radiative luminosity into kinetic luminosity as previously
-mentions. 
+mentioned. 
 We are planning to include this effect in our next set of simulations.
+
+
+
 
 
 \section{Summary }
@@ -588,16 +603,17 @@ the outflow seen in the soft-intermediate state of GRO J1655-40 could be plausib
 modelled by a thermal wind, and here we extend that work to higher luminosities. We find
 
 \begin{itemize}
-\item{As the luminosity increases, so does the mass-loss rate through the wind. However, 
-when one normalizes the mass-loss rate to the assumed accretion rate, the ratio tends to 
-a constant value of around 2. This is in agreement with previous theoretical studies and 
+\item{As the luminosity (and therefore accretion rate) increases, so does the mass-loss rate through the wind. 
+The ratio between the two, $\dot{\rm{M}}_{\rm{wind}}/\dot{\rm{M}}_{\rm{acc}}$ or the wind efficiency,
+tends to a constant value of around 2. This is in agreement with previous theoretical studies and 
 also observations.}
-\item{At the luminosity increases, the maximum blue shifted velocity seen in a simulated 
-absorption line increases. There is also less material at low velocities as the material 
-is more impulsively heated.}
-\item{The kinetic energy transported by the wind also increases with luminosity however 
-as with the mass loss rate, the ratio of kinetic energy to luminosity tends to a fixed value
-of $6\times10^{-5}$.}
+\item{At the luminosity increases, the maximum blue shifted velocities seen in a simulated 
+Fe \textsc{xxv} and Fe \textsc{xxvi} absorption lines increases. There is also less material at low 
+velocities as the material is more impulsively heated.}
+\item{The kinetic energy transported by the wind also increases with luminosity however; the efficiency of conversion from radiative luminosity to kinetic 
+luminosity is about 0.1 per cent. Differences between our predicted kinetic energy and observations could be explained
+by either a difference in efficiency (possibly due to continuum driving) or an increased underlying disk flare at high
+luminosities.}
 
 These simulations do not include the effects of radiation driving, which may become
 important at higher luminosities. 
