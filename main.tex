@@ -63,8 +63,9 @@
 
 % Title of the paper, and the short title which is used in the headers.
 % Keep the title short and informative.
-\title[Increasing luminosity]{Radiation-hydrodynamic simulations of thermally-driven disc winds in X-ray binaries: Increasing
-luminosity reveals a constant wind efficiency}
+\title[The luminosity dependence of disc winds in XRBs]{The luminosity dependence of thermally-driven disc winds in X-ray binaries}
+%\title[Increasing luminosity]{Radiation-hydrodynamic simulations of thermally-driven disc winds in X-ray binaries: Increasing
+%luminosity reveals a constant wind efficiency}
 
 % The list of authors, and the short list which is used in the headers.
 % If you need two or more lines of authors, add an extra line using \newauthor
@@ -99,21 +100,24 @@ BT7 1NN, UK\\
 % Abstract of the paper
 \begin{abstract}
 
-Signatures of outflowing gas have been observed in a number of low-mass X-ray binaries. The fact that a majority of these systems exhibit dipping behavior suggests that 
-that the outflowing gas is in the form 
-of equatorial disk winds. Although the mechanism for the launch and acceleration of these winds is debated, it is very likely
-that thermal driving contributes to the overall picture. Our previous radiation-hydrodynamic simulations of a fiducial X-ray binary indicate that thermal heating can drive significant outflows (with outflow mass from the outer parts of the disk exceeding the accretion rate onto the central black hole).
-% It has been previously demonstrated that thermal winds are able to drive significant outflows (with outflow mass
-%from outer parts of the disk exceeding the accretion rate in the inner disk required to explain the observed source
-%luminosities. 
-Here we use the same operator splitting method to carry out radiation-hydrodynamic simulations of a thermally driven 
-disk wind for a range of source luminosities. We find that as the luminosity increases, the wind efficiency (the mass outflow
-rate scaled to the assumed mass accretion rate) remains approximately constant, 
-$\dot{M}_{wind}=2\dot{M}_{acc}$. 
-This is in agreement
-with both observations and previous theoretical work. We also find that the maximum velocity seen in a simulated 
-absorption lines of Fe \textsc{xxv} and Fe {xxvi} increase with luminosity. 
-
+  We have carried out radiation-hydrodynamic simulations of
+  thermally-driven accretion disc winds in X-ray binaries. Our main
+  goal is to study the luminosity dependence of these outflows. The 
+  simulations span the range 
+  $0.04 \leq L_{acc}/L_{Edd} \leq 1.0$ and therefore cover most of the parameter
+  space in which disc winds have been observed. We
+  find that (i) the wind {\em
+  efficiency} always remains approximately
+  constant, $\dot{M}_{wind}/\dot{M}_{acc} \simeq
+  2$; (ii) the wind velocity 
+  increases with luminosity, roughly as $v \propto L_{acc}^{1/4}$;
+  (iii) the large-scale wind geometry is quasi-spherical, but 
+  observable absorption features are preferentially produced along
+  high-column equatorial sightlines; (iv) with increasing luminosity,
+  detectable high-ionization absorption features are produced at lower 
+  inclinations. In order to illustrate the observational signatures of such
+  outflows, we also present synthetic Fe \textsc{xxv}
+  and Fe \textsc{xxvi} absorption line profiles for our simulated disc winds.
 
 
 \end{abstract}
@@ -129,64 +133,87 @@ Accretion discs -- hydrodynamics -- methods:numerical -- stars:winds -- X-rays:b
 %%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%
 
 \section{Introduction}
-The signature of outflowing gas has been observed in a large range of astrophysical objects, from protostellar
-nebulae through cataclysmic variables and X-ray binaries to Seyferts and Quasars. Whilst the 
-radio loud jets are the most spectacular form of outflow, the slower, yet more massive disk
-winds may have more impact on the surroundings of the objects and change the nature
-of the accretion flow more substantially.
+Signatures of outflowing gas have been observed in essentially all
+types of disk-accreting astrophysical systems, from protostars,
+cataclysmic variables and X-ray binaries to Seyfert Galaxies and
+Quasars. Highly collimated fast jets are often the most spectacular
+type of outflow from these systems. However, less collimated, slower
+and more higly mass-loaded disk winds are at least as common and can 
+actually have a more significant impact, both on the environments of
+these systems and on the accretion flow itself. 
  
+X-ray binaries (XRBs) are systems in which secondary star transfers mass to a compact primary (either a black hole or a neutron star)
+via an accretion disk. They are excellent laboratories in which to
+study the accretion physics, with lessons learned from XRBs often finding application also in AGN and other systems) \citep{2003MNRAS.345L..19M,2004A&A...414..895F,2006MNRAS.372.1366K,
+2001MNRAS.323L..26U,
+2015SciA....1E0686S,
+2014MNRAS.438.1233S,
+2013MNRAS.431.2535S,
+2012MNRAS.421.2854S,	
+2008Sci...320.1318K,
+2018MNRAS.481.2140A,
+2015MNRAS.448.2430V}.
+In particular, XRBs exhibit dramatic changes in their spectra and luminosity over timescales on the order of days
+\cite[e.g.][]{1999ApJ...520..776S,2004ApJ...610..378P}, which can be
+linked to changes in the nature of the accretion flow
+\cite[e.g.][]{1995PASP..107.1207N,2012Sci...337..540F}. Disk winds are 
+seen when systems are in the ``high-soft'' state, during which the accretion disk is thought to extend all the way to the 
+central compact object \cite[][although see \citealt{2016ApJ...830L...5H}]{2012MNRAS.422L..11P}. Disc wind signatures are not generally
+observed in the ``low-hard'' state, during which the inner disk appears to be truncated, and the X-ray emission is dominated by a
+Comptonised corona. This suggests that disc winds might play a role in
+regulating -- and perhaps triggering -- state changes in XRBs. In
+fact, for sufficiently high mass-loss rates, disc winds are {\em
+  expected} to destabilize a steady accretion flow through the 
+disc \citep{1986ApJ...306...90S}.
 
-X-ray binaries are systems in 
-which an evolved secondary star transfers mass to a compact primary (either a black hole or a neutron star)
-via an accretion disk. They are excellent laboratories in which to study accretion physics that likely also applies to AGN
-\citep{2003MNRAS.345L..19M,2004A&A...414..895F,2006MNRAS.372.1366K}.
-In particular they exhibit dramatic changes in their spectra and luminosity over timescales on the order of days
-\cite[e.g.][]{1999ApJ...520..776S,2004ApJ...610..378P} which can be linked to changes in the nature of the accretion flow \cite[e.g.][]{1995PASP..107.1207N,2012Sci...337..540F}. Disk winds are seen when 
-systems are in the ``High-soft'' state, where the accretion disk is thought to extend to radii close to the 
-central compact object \cite[][although also see \citealt{2016ApJ...830L...5H}]{2012MNRAS.422L..11P}. This high luminosity state is in contrast to the ``low-hard'' state
-where the inner edge of the accretion disk appears to be truncated and emission is primarily arising from a Comptonised
-corona. If the disk-wind carries away enough material from the accretion disk then this provides a mechanism for
-destabilising the disk and so providing a mechanism for a state change \citep{1986ApJ...306...90S}. We are
-interested in developing a theoretical model for these disk winds with an eye to predicting the mass-loss rate
-and hence testing the possibility that such winds are indeed responsible for state change. 
-The driving mechanism for these disk winds is a topic of much debate and active research, however there are broadly
-three contenders -- radiation driving, thermal driving, and magneto-centric driving. 
+We are therefore interested in developing a theoretical model for
+these disk winds, with an eye to 
+predicting their mass-loss rates and hence testing the possibility
+that they are indeed responsible for state changes. Unfortunately, even the
+basic driving mechanism for these disk winds remains a topic of much
+debate and active research. However, broadly speaking, there are three main contenders --
+radiation driving, thermal driving, and magneto-centric driving. 
 
-The first possibility, radiation driving, is that winds develop as a result of 
- a transfer of momentum from radiation to matter via Compton
-scattering or of scattering (mainly UV) radiation
-from bound-bound lines in ionised material. If the ionisation state of the gas is 
-favourable, then this latter line driving mechanism can
-result in a driving force more than  1000 times that expected from Compton scattering alone \citep{1975ApJ...195..157C}.
- In X-ray binaries
-the observed absorption lines suggest that the material tends to be highly ionised \citep[e.g.][]{2009ApJ...701..865K,
-2018ApJ...861...26A}, with ionization parameter $\xi \geq 3$
-\citep{2016AN....337..368D} and hence this mechanism is unlikely to be important. That said, the luminosity of 
-some XRBs is 
-approaching or even exceeding the Eddington limit, and so radiation driving via Compton scattering alone 
-may be sufficient to affect the
-flow.
+The first mechanism, radiation driving, involves the transfer of
+momentum from the radiation field to outflowing matter. This transfer
+can take place via Compton scattering or via the scattering of (mainly
+UV) photons by bound-bound transitions. If the ionisation state of the gas is 
+favourable, the latter ``line-driving'' mechanism can
+produce a radiation pressure more than 1000$\times$ higher than that
+due to Compton scattering \citep{1975ApJ...195..157C,
+1995ApJ...454..410G}. In X-ray binaries, 
+the observed absorption lines suggest that the outflow is highly ionised \citep[e.g.][]{2009ApJ...701..865K,
+2018ApJ...861...26A}, with an ionization parameter $\xi \geq 3$
+\citep{2016AN....337..368D}. In such an environment, line-driving is
+unlikely to be important. However, the luminosity of some XRBs can
+approach or even exceed the Eddington limit, so radiation driving via
+Compton scattering alone may be sufficient to drive -- or at least
+affect -- the outflow.
 
-The second hypothesis, thermal driving, occurs if gas is heated to a temperature at which the thermal velocity of 
-the gas exceeds
-the local escape velocity. In this case, mass-loss is inevitable and if the geometry is suitable (for example a
-geometrically thin accretion disk) then a wind can be produced. This mechanism is particularly attractive in 
-X-ray binaries, where the relatively high temperature of the radiation produced by the inner parts of a black-hole or 
-neutron star accretion disk along with strong X-rays produced by the corona can produce gas temperatures in excess
-of the escape velocity at reasonable radii. As a rule of thumb, thermal winds might be expected
+The second mechanism, thermal driving, produces outflows whenever gas
+is heated to a temperature at which the thermal velocity exceeds
+the local escape velocity. In this situation, mass-loss is
+inevitable. This mechanism is particularly attractive in 
+X-ray binaries, where the high-energy radiation emitted close to the
+accretor can irradiate the outer disk, producing a high-temperature
+surface layer in which thermal speeds can exceed the escape velocity. As a rule of thumb, thermal winds might be expected
 to arise at or just inside the Compton Radius ($\rm{R_{IC}}$) - the radius at which gas at the Compton temperature ($T_C$ - 
 the temperature at which the Compton heating and cooling rates balance)
-for a given source SED has thermal velocity in excess of the escape velocity \citep{1983ApJ...271...70B}, defined as
+for a given source SED corresponds to a thermal velocity in excess of
+the escape velocity \citep{1983ApJ...271...70B}. More specifically,
+$R_{IC}$ is given by 
 \begin{equation}
-R_{IC}=\frac{GM_{BH}\mu m_H}{k_BT_C}
+R_{IC}=\frac{GM_{BH}\mu m_H}{k_BT_C},
 \end{equation}
 where $M_{BH}$ is the mass of the central object, $\mu$ is the 
-mean molecular mass which we set to 0.6 and the other symbols have the usual meaning. 
+mean molecular mass (which we set to 0.6), and the other symbols have the usual meaning. 
 For our SED, $T_C=1.4\times10^7$~K, so $R_{IC}=4.82\times10^{11}$ - about $4.6\times10^5$ gravitational
 radii.
 
 
- The third proposed mechanism is that of magneto-centrifugal driving. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The third proposed mechanism is that of magneto-centrifugal driving. 
 Observations of the disk-wind in GRO J1655-40 in a peculiar `hypersoft' state suggested that the wind in that
 case arose well inside $\rm{R_{IC}}$. In such a case the existence of a thermal wind is harder to justify 
 and magneto-centrifugal driving has been suggested as an alternative driving mechanism
@@ -274,7 +301,7 @@ All other aspects of the simulation are identical to that described by H18, incl
 mid-plane density boundary condition at $\rm{R=2 R_{IC}}$.
 
 \begin{table}
-\begin{tabular}{p{3.0cm}p{0.8cm}p{0.8cm}p{0.8cm}p{0.8cm}}
+\begin{tabular}{p{3.5cm}p{0.7cm}p{0.7cm}p{0.7cm}p{0.7cm}}
 \hline 
 Luminosity ($\rm{L_{edd}}$) & 0.04 & 0.1 & 0.3 & 0.6 \\ 
 \hline 
@@ -290,11 +317,12 @@ $\rm{R_{IC}~(10^{11}~cm)}$  & 4.82 & 4.82 & 4.82 & 4.82 \\
 \hline
 \multicolumn{4}{l}{Derived wind properties}\\
 \hline 
-\multicolumn{4}{l}{$\rm{V_r~(\rho>1\times10^{12})}$}  \\
-$\rm{max,blueshifted~({km~s^{-1}})}$ &  50 & 68 & 256  & 150  \\
-$\rm{V_r(max,\theta>60\degree~({km~s^{-1}})}$ &  259   & 374 & 533    & 642 \\
+$\rm{V_r(max,\theta>60\degree,~{km~s^{-1}})}$ &  259   & 374 & 533    & 642 \\
+$\rm{T(max,\theta>60\degree,r>R_{IC},~10^6K}$ & 2.8 & 3.8 & 5.3 & 6.7\\
 $\rm{N_H~(70\degree)~(10^{22}}~\rm{cm^{-2})}$ & 2.0 & 4.0 &  8.3 & 13 \\
 $\rm{N_H~(80\degree)~(10^{22}}~\rm{cm^{-2})}$  & 4.2 & 8.4 & 16 & 25 \\
+Angle for 5eV EW Fe \textsc{xxv} & 73\degree & 72\degree & 77\degree & 77\degree\\
+Angle for 5eV EW Fe \textsc{xxvi} & 68\degree & 62\degree & 60\degree & 60\degree  \\
 ${\dot{\rm{M}}_{\rm{wind,outer}}~(10^{18}~g~s^{-1}})$  &  1.1 & 2.7 &  6.7  & 12.7 \\
 ${\dot{\rm{M}}_{\rm{wind,outer}}~(\dot{\rm{M}}_{\rm{acc}})}$  & 2.5 & 2.4 & 2.0 & 1.9  \\
 ${0.5\dot{\rm{M}}\rm{V_r^2}~(10^{32}}~\rm{erg~s^{-1}})$  &  4.2 & 21.3 &   109 & 310  \\
@@ -468,13 +496,26 @@ sightline  of 80\degree . This is calculated using the same ray tracing techniqu
 by \cite{2015ApJ...807..107H}. The equivalent width (EW) is very similar for all the lines (because they are all 
 saturated) at about 5-6~eV. 
 
+
+
 \begin{figure}
-\includegraphics[width=\columnwidth]{figures/80_degrees_fe25.eps}
+\includegraphics[width=\columnwidth]{figures/60_degrees_fe26.eps}
+\includegraphics[width=\columnwidth]{figures/80_degrees_fe26.eps}
 \caption{Simulated line profile for the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$
 transition at 1.85~{\AA}, as viewed from $i = 80\degree$ for a range
 of luminosities.}
 \label{figure:line25}
 \end{figure}
+
+
+
+%\begin{figure}
+%\includegraphics[width=\columnwidth]{figures/80_degrees_fe25.eps}
+%\caption{Simulated line profile for the Fe~\textsc{xxv} Lyman~$\rm{\alpha}$
+%transition at 1.85~{\AA}, as viewed from $i = 80\degree$ for a range
+%of luminosities.}
+%\label{figure:line25}
+%\end{figure}
 
 There are two interesting observations to be made from this plot. Firstly, the maximum velocity seen in 
 the line increases with luminosity. Secondly, there is a notable difference between the line two lower luminosity 
