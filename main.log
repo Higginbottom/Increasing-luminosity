@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.28)  24 OCT 2018 16:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.7.28)  29 OCT 2018 14:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -709,14 +709,7 @@ File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 \c@@todonotes@numberoftodonotes=\count144
 )
 Package hyperref Info: Option `draft' set `true' on input line 94.
- (./main.aux
-
-LaTeX Warning: Label `figure:geometry1' multiply defined.
-
-
-LaTeX Warning: Label `section:results' multiply defined.
-
-)
+ (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
@@ -857,72 +850,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 101--102
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 172.
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 173.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ae/omsaer.fd
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 172.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 173.
  [1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-Underfull \vbox (badness 6380) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 304.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 310.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-Underfull \hbox (badness 1360) in paragraph at lines 341--354
+Underfull \hbox (badness 1360) in paragraph at lines 347--360
 []\T1/aer/m/n/9 However, in the RHD sim-u-la-tions pre-sented here,
  []
 
 
-Overfull \hbox (11.80385pt too wide) in paragraph at lines 377--377
-[]$[]$| 
+Overfull \hbox (3.70253pt too wide) in paragraph at lines 373--373
+[]\T1/aer/m/n/8 24.75| 
  []
 
 
-Overfull \hbox (12.81062pt too wide) in paragraph at lines 378--378
+Overfull \hbox (2.53319pt too wide) in paragraph at lines 383--383
 []$[]$| 
- []
-
-
-Overfull \hbox (7.072pt too wide) in paragraph at lines 381--381
-[]$[]\OT1/cmr/m/n/8 )$| 
  []
 
 <figures/fig1a_density.pdf, id=34, 505.89pt x 578.16pt>
 File: figures/fig1a_density.pdf Graphic file (type pdf)
 
 <use figures/fig1a_density.pdf>
-Package pdftex.def Info: figures/fig1a_density.pdf used on input line 397.
+Package pdftex.def Info: figures/fig1a_density.pdf used on input line 409.
 (pdftex.def)             Requested size: 240.0pt x 274.28479pt.
 
 <figures/fig1b_density.png, id=35, 505.89pt x 578.16pt>
 File: figures/fig1b_density.png Graphic file (type png)
 
 <use figures/fig1b_density.png>
-Package pdftex.def Info: figures/fig1b_density.png used on input line 398.
+Package pdftex.def Info: figures/fig1b_density.png used on input line 410.
 (pdftex.def)             Requested size: 240.0pt x 274.28479pt.
 
 <figures/fig1c_density.png, id=37, 505.89pt x 578.16pt>
 File: figures/fig1c_density.png Graphic file (type png)
 
 <use figures/fig1c_density.png>
-Package pdftex.def Info: figures/fig1c_density.png used on input line 399.
+Package pdftex.def Info: figures/fig1c_density.png used on input line 411.
 (pdftex.def)             Requested size: 240.0pt x 274.28479pt.
 
 <figures/fig1d_density.png, id=38, 505.89pt x 578.16pt>
 File: figures/fig1d_density.png Graphic file (type png)
 
 <use figures/fig1d_density.png>
-Package pdftex.def Info: figures/fig1d_density.png used on input line 400.
+Package pdftex.def Info: figures/fig1d_density.png used on input line 412.
 (pdftex.def)             Requested size: 240.0pt x 274.28479pt.
  [3]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -932,58 +920,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4 <./figures/fig1a_density.pdf> <./figures/fig1b_density.png> <./figures/fig1
 c_density.png> <./figures/fig1d_density.png>]
-
-LaTeX Warning: Reference `fig:geometry1' on page 5 undefined on input line 465.
-
-
 Package epstopdf Info: Source file: <figures/fig2.eps>
-(epstopdf)                    date: 2018-10-24 11:36:05
+(epstopdf)                    date: 2018-10-24 10:36:05
 (epstopdf)                    size: 205518 bytes
 (epstopdf)             Output file: <figures/fig2-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-24 11:36:55
+(epstopdf)                    date: 2018-10-24 10:36:55
 (epstopdf)                    size: 12019 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig2-eps-converted
 -to.pdf figures/fig2.eps>
-(epstopdf)             \includegraphics on input line 475.
+(epstopdf)             \includegraphics on input line 487.
 Package epstopdf Info: Output file is already uptodate.
+
 <figures/fig2-eps-converted-to.pdf, id=81, 216.81pt x 195.73125pt>
 File: figures/fig2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/fig2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig2-eps-converted-to.pdf used on input line 4
-75.
+87.
 (pdftex.def)             Requested size: 240.0pt x 216.67886pt.
-
-
-LaTeX Warning: Reference `fig:geometry2' on page 5 undefined on input line 492.
-
-
 Package epstopdf Info: Source file: <figures/fig3_fe25EW.eps>
-(epstopdf)                    date: 2018-10-24 11:31:58
+(epstopdf)                    date: 2018-10-24 10:31:58
 (epstopdf)                    size: 205973 bytes
 (epstopdf)             Output file: <figures/fig3_fe25EW-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-24 11:34:00
+(epstopdf)                    date: 2018-10-24 10:34:00
 (epstopdf)                    size: 12628 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig3_fe25EW-eps-co
 nverted-to.pdf figures/fig3_fe25EW.eps>
-(epstopdf)             \includegraphics on input line 501.
+(epstopdf)             \includegraphics on input line 518.
 Package epstopdf Info: Output file is already uptodate.
+
 <figures/fig3_fe25EW-eps-converted-to.pdf, id=82, 216.81pt x 195.73125pt>
 File: figures/fig3_fe25EW-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/fig3_fe25EW-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig3_fe25EW-eps-converted-to.pdf used on input
- line 501.
+ line 518.
 (pdftex.def)             Requested size: 240.0pt x 216.67886pt.
 Package epstopdf Info: Source file: <figures/fig3_fe26EW.eps>
-(epstopdf)                    date: 2018-10-24 11:34:27
+(epstopdf)                    date: 2018-10-24 10:34:27
 (epstopdf)                    size: 210238 bytes
 (epstopdf)             Output file: <figures/fig3_fe26EW-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-24 11:35:22
+(epstopdf)                    date: 2018-10-24 10:35:22
 (epstopdf)                    size: 13829 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig3_fe26EW-eps-co
 nverted-to.pdf figures/fig3_fe26EW.eps>
-(epstopdf)             \includegraphics on input line 502.
+(epstopdf)             \includegraphics on input line 519.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/fig3_fe26EW-eps-converted-to.pdf, id=83, 216.81pt x 195.73125pt>
@@ -991,45 +972,39 @@ File: figures/fig3_fe26EW-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/fig3_fe26EW-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig3_fe26EW-eps-converted-to.pdf used on input
- line 502.
+ line 519.
 (pdftex.def)             Requested size: 240.0pt x 216.67886pt.
 Package epstopdf Info: Source file: <figures/fig4_ponti.eps>
-(epstopdf)                    date: 2018-10-24 13:46:51
-(epstopdf)                    size: 211972 bytes
+(epstopdf)                    date: 2018-10-29 12:16:32
+(epstopdf)                    size: 213186 bytes
 (epstopdf)             Output file: <figures/fig4_ponti-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-10-24 13:47:22
-(epstopdf)                    size: 12502 bytes
+(epstopdf)                    date: 2018-10-29 12:23:05
+(epstopdf)                    size: 12555 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig4_ponti-eps-con
 verted-to.pdf figures/fig4_ponti.eps>
-(epstopdf)             \includegraphics on input line 545.
+(epstopdf)             \includegraphics on input line 566.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/fig4_ponti-eps-converted-to.pdf, id=84, 216.81pt x 195.73125pt>
+<figures/fig4_ponti-eps-converted-to.pdf, id=84, 216.81pt x 180.675pt>
 File: figures/fig4_ponti-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/fig4_ponti-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig4_ponti-eps-converted-to.pdf used on input 
-line 545.
-(pdftex.def)             Requested size: 240.0pt x 216.67886pt.
-
-
-LaTeX Warning: Reference `BLA' on page 5 undefined on input line 561.
-
-[5 <./figures/fig2-eps-converted-to.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [6 <./figures/fig3_fe25EW-eps-converted-to.pdf> <./figures/fig3_fe26EW-eps-con
-verted-to.pdf> <./figures/fig4_ponti-eps-converted-to.pdf>]
+line 566.
+(pdftex.def)             Requested size: 240.0pt x 200.01126pt.
+ [5 <./figures/fig2-eps-converted-to.pdf>] [6 <./figures/fig3_fe25EW-eps-conver
+ted-to.pdf> <./figures/fig3_fe26EW-eps-converted-to.pdf> <./figures/fig4_ponti-
+eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/fig5_80_degrees_fe25.eps>
-(epstopdf)                    date: 2018-10-24 14:38:21
+(epstopdf)                    date: 2018-10-24 13:38:21
 (epstopdf)                    size: 223288 bytes
 (epstopdf)             Output file: <figures/fig5_80_degrees_fe25-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2018-10-24 14:39:38
+(epstopdf)                    date: 2018-10-24 13:39:38
 (epstopdf)                    size: 18159 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig5_80_degrees_fe
 25-eps-converted-to.pdf figures/fig5_80_degrees_fe25.eps>
-(epstopdf)             \includegraphics on input line 640.
+(epstopdf)             \includegraphics on input line 664.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/fig5_80_degrees_fe25-eps-converted-to.pdf, id=125, 216.81pt x 180.675p
@@ -1038,18 +1013,18 @@ File: figures/fig5_80_degrees_fe25-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figures/fig5_80_degrees_fe25-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig5_80_degrees_fe25-eps-converted-to.pdf used
- on input line 640.
+ on input line 664.
 (pdftex.def)             Requested size: 240.0pt x 200.01126pt.
 Package epstopdf Info: Source file: <figures/fig6_80_degrees_fe26_smooth.eps>
-(epstopdf)                    date: 2018-10-24 14:58:59
+(epstopdf)                    date: 2018-10-24 13:58:59
 (epstopdf)                    size: 220159 bytes
 (epstopdf)             Output file: <figures/fig6_80_degrees_fe26_smooth-eps-co
 nverted-to.pdf>
-(epstopdf)                    date: 2018-10-24 15:00:36
+(epstopdf)                    date: 2018-10-24 14:00:36
 (epstopdf)                    size: 17522 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig6_80_degrees_fe
 26_smooth-eps-converted-to.pdf figures/fig6_80_degrees_fe26_smooth.eps>
-(epstopdf)             \includegraphics on input line 677.
+(epstopdf)             \includegraphics on input line 700.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/fig6_80_degrees_fe26_smooth-eps-converted-to.pdf, id=126, 216.81pt x 1
@@ -1058,21 +1033,21 @@ File: figures/fig6_80_degrees_fe26_smooth-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use figures/fig6_80_degrees_fe26_smooth-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig6_80_degrees_fe26_smooth-eps-converted-to.p
-df used on input line 677.
+df used on input line 700.
 (pdftex.def)             Requested size: 240.0pt x 200.01126pt.
 
 [7 <./figures/fig5_80_degrees_fe25-eps-converted-to.pdf> <./figures/fig6_80_deg
 rees_fe26_smooth-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/fig7_lum_vs_ke_ponti.eps>
-(epstopdf)                    date: 2018-10-24 15:51:21
-(epstopdf)                    size: 213234 bytes
+(epstopdf)                    date: 2018-10-29 12:21:02
+(epstopdf)                    size: 215110 bytes
 (epstopdf)             Output file: <figures/fig7_lum_vs_ke_ponti-eps-converted
 -to.pdf>
-(epstopdf)                    date: 2018-10-24 15:53:07
-(epstopdf)                    size: 13303 bytes
+(epstopdf)                    date: 2018-10-29 12:23:05
+(epstopdf)                    size: 13351 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/fig7_lum_vs_ke_pon
 ti-eps-converted-to.pdf figures/fig7_lum_vs_ke_ponti.eps>
-(epstopdf)             \includegraphics on input line 729.
+(epstopdf)             \includegraphics on input line 752.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/fig7_lum_vs_ke_ponti-eps-converted-to.pdf, id=161, 216.81pt x 180.675p
@@ -1081,31 +1056,27 @@ File: figures/fig7_lum_vs_ke_ponti-eps-converted-to.pdf Graphic file (type pdf)
 
  <use figures/fig7_lum_vs_ke_ponti-eps-converted-to.pdf>
 Package pdftex.def Info: figures/fig7_lum_vs_ke_ponti-eps-converted-to.pdf used
- on input line 729.
+ on input line 752.
 (pdftex.def)             Requested size: 240.0pt x 200.01126pt.
- [8 <./figures/fig7_lum_vs_ke_ponti-eps-converted-to.pdf>] (./main.bbl) [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 863.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 863.
+ [8 <./figures/fig7_lum_vs_ke_ponti-eps-converted-to.pdf>] (./main.bbl [9])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 899.
+ [10
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 899.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 863.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 863.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 863.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 899.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 899.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 899.
  ) 
 Here is how much of TeX's memory you used:
- 19214 strings out of 492995
- 352876 string characters out of 6132704
- 440792 words of memory out of 5000000
- 22346 multiletter control sequences out of 15000+600000
+ 19231 strings out of 492995
+ 353372 string characters out of 6132704
+ 443747 words of memory out of 5000000
+ 22363 multiletter control sequences out of 15000+600000
  60535 words of font info for 125 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,56p,692b,379s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,56p,796b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></
@@ -1135,10 +1106,10 @@ ts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on main.pdf (9 pages, 3663650 bytes).
+Output written on main.pdf (10 pages, 3665739 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 202 compressed objects within 3 object streams
+ 265 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  68 words of extra memory for PDF output out of 10000 (max. 10000000)
 

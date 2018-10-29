@@ -41,6 +41,12 @@
   {10.1086/161178}, \href {http://adsabs.harvard.edu/abs/1983ApJ...271...70B}
   {271, 70}
 
+\bibitem[\protect\citeauthoryear{{Blandford} \& {Payne}}{{Blandford} \&
+  {Payne}}{1982}]{1982MNRAS.199..883B}
+{Blandford} R.~D.,  {Payne} D.~G.,  1982, \mn@doi [\mnras]
+  {10.1093/mnras/199.4.883}, \href
+  {http://adsabs.harvard.edu/abs/1982MNRAS.199..883B} {199, 883}
+
 \bibitem[\protect\citeauthoryear{{Bu} \& {Yang}}{{Bu} \&
   {Yang}}{2018}]{2018MNRAS.476.4395B}
 {Bu} D.-F.,  {Yang} X.-H.,  2018, \mn@doi [\mnras] {10.1093/mnras/sty053},
@@ -80,6 +86,12 @@
   Nachrichten] {10.1002/asna.201612315}, \href
   {http://adsabs.harvard.edu/abs/2016AN....337..368D} {337, 368}
 
+\bibitem[\protect\citeauthoryear{{Done}, {Gierli{\'n}ski}  \& {Kubota}}{{Done}
+  et~al.}{2007}]{2007A&ARv..15....1D}
+{Done} C.,  {Gierli{\'n}ski} M.,   {Kubota} A.,  2007, \mn@doi [\aapr]
+  {10.1007/s00159-007-0006-1}, \href
+  {http://adsabs.harvard.edu/abs/2007A%26ARv..15....1D} {15, 1}
+
 \bibitem[\protect\citeauthoryear{{Done}, {Tomaru}  \& {Takahashi}}{{Done}
   et~al.}{2018}]{2018MNRAS.473..838D}
 {Done} C.,  {Tomaru} R.,   {Takahashi} T.,  2018, \mn@doi [\mnras]
@@ -102,6 +114,11 @@
   {Belloni}}{2012}]{2012Sci...337..540F}
 {Fender} R.,  {Belloni} T.,  2012, \mn@doi [Science] {10.1126/science.1221790},
   \href {http://adsabs.harvard.edu/abs/2012Sci...337..540F} {337, 540}
+
+\bibitem[\protect\citeauthoryear{{Fender} \& {Gallo}}{{Fender} \&
+  {Gallo}}{2014}]{2014SSRv..183..323F}
+{Fender} R.,  {Gallo} E.,  2014, \mn@doi [\ssr] {10.1007/s11214-014-0069-z},
+  \href {http://adsabs.harvard.edu/abs/2014SSRv..183..323F} {183, 323}
 
 \bibitem[\protect\citeauthoryear{{Gayley}}{{Gayley}}{1995}]{1995ApJ...454..410G}
 {Gayley} K.~G.,  1995, \mn@doi [\apj] {10.1086/176492}, \href
@@ -217,6 +234,11 @@
 {Miller} J.~M.,  et~al., 2016, \mn@doi [\apjl] {10.3847/2041-8205/821/1/L9},
   \href {http://adsabs.harvard.edu/abs/2016ApJ...821L...9M} {821, L9}
 
+\bibitem[\protect\citeauthoryear{{Neilsen} \& {Lee}}{{Neilsen} \&
+  {Lee}}{2009}]{2009Natur.458..481N}
+{Neilsen} J.,  {Lee} J.~C.,  2009, \mn@doi [\nat] {10.1038/nature07680}, \href
+  {http://adsabs.harvard.edu/abs/2009Natur.458..481N} {458, 481}
+
 \bibitem[\protect\citeauthoryear{{Netzer}}{{Netzer}}{2006}]{2006ApJ...652L.117N}
 {Netzer} H.,  2006, \mn@doi [\apjl] {10.1086/510067}, \href
   {http://adsabs.harvard.edu/abs/2006ApJ...652L.117N} {652, L117}
@@ -303,6 +325,12 @@
   \mn@doi [\apj] {10.1086/164322}, \href
   {http://adsabs.harvard.edu/abs/1986ApJ...306...90S} {306, 90}
 
+\bibitem[\protect\citeauthoryear{{Sim}, {Drew}  \& {Long}}{{Sim}
+  et~al.}{2005}]{2005MNRAS.363..615S}
+{Sim} S.~A.,  {Drew} J.~E.,   {Long} K.~S.,  2005, \mn@doi [\mnras]
+  {10.1111/j.1365-2966.2005.09472.x}, \href
+  {http://adsabs.harvard.edu/abs/2005MNRAS.363..615S} {363, 615}
+
 \bibitem[\protect\citeauthoryear{{Sobczak}, {McClintock}, {Remillard}, {Bailyn}
    \& {Orosz}}{{Sobczak} et~al.}{1999}]{1999ApJ...520..776S}
 {Sobczak} G.~J.,  {McClintock} J.~E.,  {Remillard} R.~A.,  {Bailyn} C.~D.,
@@ -330,6 +358,11 @@
 {Van de Sande} M.,  {Scaringi} S.,   {Knigge} C.,  2015, \mn@doi [\mnras]
   {10.1093/mnras/stv157}, \href
   {http://adsabs.harvard.edu/abs/2015MNRAS.448.2430V} {448, 2430}
+
+\bibitem[\protect\citeauthoryear{{Waters} \& {Proga}}{{Waters} \&
+  {Proga}}{2018}]{2018MNRAS.481.2628W}
+{Waters} T.,  {Proga} D.,  2018, \mn@doi [\mnras] {10.1093/mnras/sty2398},
+  \href {http://adsabs.harvard.edu/abs/2018MNRAS.481.2628W} {481, 2628}
 
 \bibitem[\protect\citeauthoryear{{Woods}, {Klein}, {Castor}, {McKee}  \&
   {Bell}}{{Woods} et~al.}{1996}]{1996ApJ...461..767W}
