@@ -103,7 +103,7 @@ BT7 1NN, UK\\
   We have carried out radiation-hydrodynamic simulations of
   thermally-driven accretion disc winds in low mass X-ray binaries. Our main
   goal is to study the luminosity dependence of these outflows \textcolor{red}{
-  and compare wth observations}. The 
+  and compare with observations}. The 
   simulations span the range 
   $\rm{0.04 \leq L_{acc}/L_{Edd} \leq 1.0}$ and therefore cover most
   of the parameter space in which disc winds have been observed. \textcolor{red}{
@@ -314,12 +314,21 @@ As in H18, we use an operator splitting method to link the hydrodynamic code {\s
  radiative transfer code {\sc python}\footnote{More information about and the source code for 
  \textsc{python} can be found at \url{https://github.com/agnwinds/python}.} \citep[][extended by 
   \citealt{2005MNRAS.363..615S}, \citealt{,2013MNRAS.436.1390H} and
- \citealt{2015MNRAS.450.3331M}]{2002ApJ...579..725L}. \textcolor{red}{This allows
- us to fully take account of radiation attenuation effects and therefore discard the optically thin
- assumption used in most earlier efforts to model thermal winds. The simulation proceeds via a
- series of hydrodynamic steps in \textsc{zeus} and radiation transport (RT) steps in \textsc{python}. 
- The RT steps are used to provide `correction' factors to the optically thin heating and cooling
- rates originally calculated by \cite{1994ApJ...435..756B} which are used in \textsc{zeus}}
+ \citealt{2015MNRAS.450.3331M}]{2002ApJ...579..725L}. \textcolor{red}{In brief, the scheme works
+ by allowing \textsc{zeus} to perform hydrodynamic simulations for a short period of time
+ (typically 1000s of simulation. time) with heating and cooling rates applied using the optically 
+ thin equations suggested by \cite{1994ApJ...435..756B}. The final state of the simulation
+ (density, temperature and velocities) is then passed to \textsc{python} where a Monte-Carlo
+ radiation transport (RT) and ionization calculation is carried out to compute the ionization
+ state of the gas, and hence the true heating and cooling rates based upon the attenuation
+ between the radiation source and each cell in the simulation. The detailed nature of the RT allows
+ all mechanisms of frequency dependant radiation attenuation (e.g. photoionization absorption and
+ line scattering) to be fully dealt with. Also of significance is the effect of multiple scattering, which
+ is fully included in the Monte-Carlo method of RT, and can be important where sight-lines from a 
+ cell back to the centre are heavily obscured. The cycle is 
+ then completed by \textsc{python} passing back the improved estimates of heating and cooling 
+ rates to \textsc{zeus}, where they are used to provide `correction' factors to the optically thin 
+ heating and cooling rates.}
  
  
  Thermally driven winds are expected to operate only beyond $\simeq 0.1 \rm{R_{IC}}$, which is
@@ -341,7 +350,8 @@ a mass reservoir for any resulting outflow.
 The value of this constant density is important, because it determines
 whether the simulation grid captures the entire acceleration zone of
 the outflow. \textcolor{red}{For the SED used in these simulations, a bremsstrahlung
-type spectrum with $\rm{T_x=5.6\times10^7K}$, the heating and cooling 
+type spectrum, $\rm{L(\nu)\propto \exp{(-h\nu/k_BT_x)}}$  with $\rm{T_x=5.6\times10^7K}$, 
+the heating and cooling 
 rates give rise to a thermal instability.}  X-ray irradiated
 material in the disc atmosphere can only achieve thermal equilibrium
 at $T \simeq ({\rm a~few}) \times 10^4$~K (where line/recombination
@@ -349,7 +359,7 @@ cooling balances photoionization heating) or at $T \simeq 10^{6-7}$~K
 (where Compton processes dominate). The intermediate temperature
 region is thermally unstable. The cool branch is only available at low 
 ionization parameters, $\xi = (4\pi F_{irr}) / n_H$ < $\xi_{cool,max}$,
-where $F_{irr}$ is the incident irradiating flux and $n_H$ is the
+where $F_{irr}$ is the incident irradiating flux above 13.6eV and $n_H$ is the
 hydrogen number density. In order to attain the high temperatures 
 necessary to launch a
 thermally driven winds, material in the the disc atmosphere must
@@ -376,7 +386,13 @@ not just undergone geometric dilution, but also attenuation by
 intervening material. It is therefore not possible to  
 compute the ionization parameter for each mid-plane cell a-priori, since it
 depends not only on the local density, but also on the density of the
-developing wind along the sightline back to the central source. We
+developing wind along the sightline back to the central source.
+\textcolor{red}{This material not only attenuates the radiation but
+can also significantly change the 
+SED seen in a given cell which in turn dramatically changes the stability curve 
+on a cell by cell basis
+\citep{2017MNRAS.467.4161D}.}
+We
 therefore conservatively set the mid-plane density to the value
 obtained for the ionisation parameter \textcolor{red}{computed in the 
 optically thin limit.}  In order to give
@@ -485,7 +501,7 @@ edge; in the $\rm{L_x = L_{Edd}}$ simulation, the disc-wind interface at
 the outer edge of the disc lies at an angle of 87\degree.
 
  \textcolor{red}{Above the static disk, at small radii,
-within about $\rm{0.2~R_{IC}}$ a very slow moving clump of gas forms, 
+within about $\rm{0.2~R_{IC}}$ a turbulent clump of subsonic gas forms, 
 which can be identified with the corona seen by \citep{1996ApJ...461..767W}.
 As in that work, we find that the size of this hydrostatically supported structure
 is roughly independent of luminosity. Further out, the strongly heated gas above 
@@ -595,7 +611,8 @@ preferentially focused in this direction.
 
 \subsection{Mass-loss Rates}
 
-The wind mass-loss rates ($\dot{\rm{M}}_{\rm{wind,outer}}$) listed in
+The wind mass-loss rates \textcolor{red}{through the outer boundary} 
+($\dot{\rm{M}}_{\rm{wind,outer}}$) listed in
 Table \ref{table:wind_param}   
 increase as the luminosity of the central source increases. However,
 when we compare these values to the implied 
@@ -622,6 +639,17 @@ remains greater than unity. In general, the wind efficiencies in our
 RHD simulations are slightly larger than theirs. This is interesting since
 we neglect any radiation driving effects, which they include via an
 approximate correction.
+
+\textcolor{red}{We have also compared our mass-loss rates from the 
+disk surface with those reported
+by \cite{1996ApJ...461..767W}. We find a somewhat smaller mass-loss
+rate per unit area of the disk for the same central source luminosity than implied 
+by their equation 4.8. We also see
+a faster drop off with radius, although we have a much reduced radial
+dynamic range because we truncate our disk at $\rm{R=2R_{IC}}$. 
+Both of these effects are due to a reduction in radiative flux in the acceleration 
+zone due to attenuation. A reduction in mass-loss rate of about a factor of 5 
+was also seen by H18 when RT effects were first introduced into these simulations.}
 
 Observationally inferred wind efficiencies have been compiled and
 presented by P12, and it is instructive to
@@ -873,9 +901,14 @@ the simulations and this
 might explain why the observed kinetic energy flux appears to increase
 significantly for $\rm{L \geq 0.3L_{Edd}}$. If the outflows at these
 luminosities are thermally driven, with the same efficiency as those
-at lower luminosities, the implied disc opening is
+at lower luminosities, \textcolor{red}{then we can compute an implied disk 
+opening angle by simple asking what proportion of the luminosity of 
+the central source must be intercepted
+by the disk surface. This }implied disc opening angle is
 $\simeq$40\degree. However, in this high luminosity regime, radiation
-driving may also help to increase the conversion efficiency.
+driving may also help to increase the \textcolor{red}{ efficiency of conversion 
+from radiative to kinetic energy and therefore mean that a smaller
+opening angle is required.}
 
 \subsection{Radiative Driving}
 \label{section:radiative_driving}
